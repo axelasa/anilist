@@ -21,11 +21,8 @@ GetAnimeGenresModel _$GetAnimeGenresModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetAnimeGenresModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   int? get amount => throw _privateConstructorUsedError;
-  set amount(int? value) => throw _privateConstructorUsedError;
   int? get id => throw _privateConstructorUsedError;
-  set id(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -136,16 +133,30 @@ class _$GetAnimeGenresModelImpl implements _GetAnimeGenresModel {
       _$$GetAnimeGenresModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  int? amount;
+  final int? amount;
   @override
-  int? id;
+  final int? id;
 
   @override
   String toString() {
     return 'GetAnimeGenresModel(title: $title, amount: $amount, id: $id)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeGenresModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, title, amount, id);
 
   /// Create a copy of GetAnimeGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -165,21 +176,20 @@ class _$GetAnimeGenresModelImpl implements _GetAnimeGenresModel {
 }
 
 abstract class _GetAnimeGenresModel implements GetAnimeGenresModel {
-  factory _GetAnimeGenresModel({String? title, int? amount, int? id}) =
-      _$GetAnimeGenresModelImpl;
+  factory _GetAnimeGenresModel(
+      {final String? title,
+      final int? amount,
+      final int? id}) = _$GetAnimeGenresModelImpl;
 
   factory _GetAnimeGenresModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeGenresModelImpl.fromJson;
 
   @override
   String? get title;
-  set title(String? value);
   @override
   int? get amount;
-  set amount(int? value);
   @override
   int? get id;
-  set id(int? value);
 
   /// Create a copy of GetAnimeGenresModel
   /// with the given fields replaced by the non-null parameter values.

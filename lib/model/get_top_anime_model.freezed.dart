@@ -21,31 +21,18 @@ GetTopAnimeModel _$GetTopAnimeModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GetTopAnimeModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'picture_url')
   String? get pictureUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value) => throw _privateConstructorUsedError;
   int? get rank => throw _privateConstructorUsedError;
-  set rank(int? value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'aired_on')
   String? get airedOn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'aired_on')
-  set airedOn(String? value) => throw _privateConstructorUsedError;
   int? get members => throw _privateConstructorUsedError;
-  set members(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetTopAnimeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -243,32 +230,56 @@ class _$GetTopAnimeModelImpl implements _GetTopAnimeModel {
       _$$GetTopAnimeModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
   @JsonKey(name: 'picture_url')
-  String? pictureUrl;
+  final String? pictureUrl;
   @override
   @JsonKey(name: 'myanimelist_url')
-  String? myanimelistUrl;
+  final String? myanimelistUrl;
   @override
   @JsonKey(name: 'myanimelist_id')
-  int? myanimelistId;
+  final int? myanimelistId;
   @override
-  int? rank;
+  final int? rank;
   @override
-  double? score;
+  final double? score;
   @override
-  String? type;
+  final String? type;
   @override
   @JsonKey(name: 'aired_on')
-  String? airedOn;
+  final String? airedOn;
   @override
-  int? members;
+  final int? members;
 
   @override
   String toString() {
     return 'GetTopAnimeModel(title: $title, pictureUrl: $pictureUrl, myanimelistUrl: $myanimelistUrl, myanimelistId: $myanimelistId, rank: $rank, score: $score, type: $type, airedOn: $airedOn, members: $members)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetTopAnimeModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.pictureUrl, pictureUrl) ||
+                other.pictureUrl == pictureUrl) &&
+            (identical(other.myanimelistUrl, myanimelistUrl) ||
+                other.myanimelistUrl == myanimelistUrl) &&
+            (identical(other.myanimelistId, myanimelistId) ||
+                other.myanimelistId == myanimelistId) &&
+            (identical(other.rank, rank) || other.rank == rank) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.airedOn, airedOn) || other.airedOn == airedOn) &&
+            (identical(other.members, members) || other.members == members));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, title, pictureUrl,
+      myanimelistUrl, myanimelistId, rank, score, type, airedOn, members);
 
   /// Create a copy of GetTopAnimeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -289,54 +300,41 @@ class _$GetTopAnimeModelImpl implements _GetTopAnimeModel {
 
 abstract class _GetTopAnimeModel implements GetTopAnimeModel {
   factory _GetTopAnimeModel(
-      {String? title,
-      @JsonKey(name: 'picture_url') String? pictureUrl,
-      @JsonKey(name: 'myanimelist_url') String? myanimelistUrl,
-      @JsonKey(name: 'myanimelist_id') int? myanimelistId,
-      int? rank,
-      double? score,
-      String? type,
-      @JsonKey(name: 'aired_on') String? airedOn,
-      int? members}) = _$GetTopAnimeModelImpl;
+      {final String? title,
+      @JsonKey(name: 'picture_url') final String? pictureUrl,
+      @JsonKey(name: 'myanimelist_url') final String? myanimelistUrl,
+      @JsonKey(name: 'myanimelist_id') final int? myanimelistId,
+      final int? rank,
+      final double? score,
+      final String? type,
+      @JsonKey(name: 'aired_on') final String? airedOn,
+      final int? members}) = _$GetTopAnimeModelImpl;
 
   factory _GetTopAnimeModel.fromJson(Map<String, dynamic> json) =
       _$GetTopAnimeModelImpl.fromJson;
 
   @override
   String? get title;
-  set title(String? value);
   @override
   @JsonKey(name: 'picture_url')
   String? get pictureUrl;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value);
   @override
   int? get rank;
-  set rank(int? value);
   @override
   double? get score;
-  set score(double? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   @JsonKey(name: 'aired_on')
   String? get airedOn;
-  @JsonKey(name: 'aired_on')
-  set airedOn(String? value);
   @override
   int? get members;
-  set members(int? value);
 
   /// Create a copy of GetTopAnimeModel
   /// with the given fields replaced by the non-null parameter values.

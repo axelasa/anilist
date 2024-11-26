@@ -24,38 +24,20 @@ mixin _$GetSeasonalAnimesModel {
   @JsonKey(name: 'TV (New)')
   List<GetSeasonalAnimesTVNewModel?>? get TVNew =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'TV (New)')
-  set TVNew(List<GetSeasonalAnimesTVNewModel?>? value) =>
-      throw _privateConstructorUsedError;
   @JsonKey(name: 'TV (Continuing)')
   List<GetSeasonalAnimesTVContinuingModel?>? get TVContinuing =>
-      throw _privateConstructorUsedError;
-  @JsonKey(name: 'TV (Continuing)')
-  set TVContinuing(List<GetSeasonalAnimesTVContinuingModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'ONA')
   List<GetSeasonalAnimesONAModel?>? get ONA =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'ONA')
-  set ONA(List<GetSeasonalAnimesONAModel?>? value) =>
-      throw _privateConstructorUsedError;
   @JsonKey(name: 'OVA')
   List<GetSeasonalAnimesOVAModel?>? get OVA =>
-      throw _privateConstructorUsedError;
-  @JsonKey(name: 'OVA')
-  set OVA(List<GetSeasonalAnimesOVAModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'Movie')
   List<GetSeasonalAnimesMovieModel?>? get Movie =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'Movie')
-  set Movie(List<GetSeasonalAnimesMovieModel?>? value) =>
-      throw _privateConstructorUsedError;
   @JsonKey(name: 'Special')
   List<GetSeasonalAnimesSpecialModel?>? get Special =>
-      throw _privateConstructorUsedError;
-  @JsonKey(name: 'Special')
-  set Special(List<GetSeasonalAnimesSpecialModel?>? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesModel to a JSON map.
@@ -179,27 +161,27 @@ class __$$GetSeasonalAnimesModelImplCopyWithImpl<$Res>
   }) {
     return _then(_$GetSeasonalAnimesModelImpl(
       TVNew: freezed == TVNew
-          ? _value.TVNew
+          ? _value._TVNew
           : TVNew // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesTVNewModel?>?,
       TVContinuing: freezed == TVContinuing
-          ? _value.TVContinuing
+          ? _value._TVContinuing
           : TVContinuing // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesTVContinuingModel?>?,
       ONA: freezed == ONA
-          ? _value.ONA
+          ? _value._ONA
           : ONA // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesONAModel?>?,
       OVA: freezed == OVA
-          ? _value.OVA
+          ? _value._OVA
           : OVA // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesOVAModel?>?,
       Movie: freezed == Movie
-          ? _value.Movie
+          ? _value._Movie
           : Movie // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesMovieModel?>?,
       Special: freezed == Special
-          ? _value.Special
+          ? _value._Special
           : Special // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesSpecialModel?>?,
     ));
@@ -210,39 +192,120 @@ class __$$GetSeasonalAnimesModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetSeasonalAnimesModelImpl implements _GetSeasonalAnimesModel {
   _$GetSeasonalAnimesModelImpl(
-      {@JsonKey(name: 'TV (New)') this.TVNew,
-      @JsonKey(name: 'TV (Continuing)') this.TVContinuing,
-      @JsonKey(name: 'ONA') this.ONA,
-      @JsonKey(name: 'OVA') this.OVA,
-      @JsonKey(name: 'Movie') this.Movie,
-      @JsonKey(name: 'Special') this.Special});
+      {@JsonKey(name: 'TV (New)')
+      final List<GetSeasonalAnimesTVNewModel?>? TVNew,
+      @JsonKey(name: 'TV (Continuing)')
+      final List<GetSeasonalAnimesTVContinuingModel?>? TVContinuing,
+      @JsonKey(name: 'ONA') final List<GetSeasonalAnimesONAModel?>? ONA,
+      @JsonKey(name: 'OVA') final List<GetSeasonalAnimesOVAModel?>? OVA,
+      @JsonKey(name: 'Movie') final List<GetSeasonalAnimesMovieModel?>? Movie,
+      @JsonKey(name: 'Special')
+      final List<GetSeasonalAnimesSpecialModel?>? Special})
+      : _TVNew = TVNew,
+        _TVContinuing = TVContinuing,
+        _ONA = ONA,
+        _OVA = OVA,
+        _Movie = Movie,
+        _Special = Special;
 
   factory _$GetSeasonalAnimesModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesModelImplFromJson(json);
 
+  final List<GetSeasonalAnimesTVNewModel?>? _TVNew;
   @override
   @JsonKey(name: 'TV (New)')
-  List<GetSeasonalAnimesTVNewModel?>? TVNew;
+  List<GetSeasonalAnimesTVNewModel?>? get TVNew {
+    final value = _TVNew;
+    if (value == null) return null;
+    if (_TVNew is EqualUnmodifiableListView) return _TVNew;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetSeasonalAnimesTVContinuingModel?>? _TVContinuing;
   @override
   @JsonKey(name: 'TV (Continuing)')
-  List<GetSeasonalAnimesTVContinuingModel?>? TVContinuing;
+  List<GetSeasonalAnimesTVContinuingModel?>? get TVContinuing {
+    final value = _TVContinuing;
+    if (value == null) return null;
+    if (_TVContinuing is EqualUnmodifiableListView) return _TVContinuing;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetSeasonalAnimesONAModel?>? _ONA;
   @override
   @JsonKey(name: 'ONA')
-  List<GetSeasonalAnimesONAModel?>? ONA;
+  List<GetSeasonalAnimesONAModel?>? get ONA {
+    final value = _ONA;
+    if (value == null) return null;
+    if (_ONA is EqualUnmodifiableListView) return _ONA;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetSeasonalAnimesOVAModel?>? _OVA;
   @override
   @JsonKey(name: 'OVA')
-  List<GetSeasonalAnimesOVAModel?>? OVA;
+  List<GetSeasonalAnimesOVAModel?>? get OVA {
+    final value = _OVA;
+    if (value == null) return null;
+    if (_OVA is EqualUnmodifiableListView) return _OVA;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetSeasonalAnimesMovieModel?>? _Movie;
   @override
   @JsonKey(name: 'Movie')
-  List<GetSeasonalAnimesMovieModel?>? Movie;
+  List<GetSeasonalAnimesMovieModel?>? get Movie {
+    final value = _Movie;
+    if (value == null) return null;
+    if (_Movie is EqualUnmodifiableListView) return _Movie;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetSeasonalAnimesSpecialModel?>? _Special;
   @override
   @JsonKey(name: 'Special')
-  List<GetSeasonalAnimesSpecialModel?>? Special;
+  List<GetSeasonalAnimesSpecialModel?>? get Special {
+    final value = _Special;
+    if (value == null) return null;
+    if (_Special is EqualUnmodifiableListView) return _Special;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
     return 'GetSeasonalAnimesModel(TVNew: $TVNew, TVContinuing: $TVContinuing, ONA: $ONA, OVA: $OVA, Movie: $Movie, Special: $Special)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesModelImpl &&
+            const DeepCollectionEquality().equals(other._TVNew, _TVNew) &&
+            const DeepCollectionEquality()
+                .equals(other._TVContinuing, _TVContinuing) &&
+            const DeepCollectionEquality().equals(other._ONA, _ONA) &&
+            const DeepCollectionEquality().equals(other._OVA, _OVA) &&
+            const DeepCollectionEquality().equals(other._Movie, _Movie) &&
+            const DeepCollectionEquality().equals(other._Special, _Special));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_TVNew),
+      const DeepCollectionEquality().hash(_TVContinuing),
+      const DeepCollectionEquality().hash(_ONA),
+      const DeepCollectionEquality().hash(_OVA),
+      const DeepCollectionEquality().hash(_Movie),
+      const DeepCollectionEquality().hash(_Special));
 
   /// Create a copy of GetSeasonalAnimesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -263,15 +326,16 @@ class _$GetSeasonalAnimesModelImpl implements _GetSeasonalAnimesModel {
 
 abstract class _GetSeasonalAnimesModel implements GetSeasonalAnimesModel {
   factory _GetSeasonalAnimesModel(
-          {@JsonKey(name: 'TV (New)') List<GetSeasonalAnimesTVNewModel?>? TVNew,
-          @JsonKey(name: 'TV (Continuing)')
-          List<GetSeasonalAnimesTVContinuingModel?>? TVContinuing,
-          @JsonKey(name: 'ONA') List<GetSeasonalAnimesONAModel?>? ONA,
-          @JsonKey(name: 'OVA') List<GetSeasonalAnimesOVAModel?>? OVA,
-          @JsonKey(name: 'Movie') List<GetSeasonalAnimesMovieModel?>? Movie,
-          @JsonKey(name: 'Special')
-          List<GetSeasonalAnimesSpecialModel?>? Special}) =
-      _$GetSeasonalAnimesModelImpl;
+      {@JsonKey(name: 'TV (New)')
+      final List<GetSeasonalAnimesTVNewModel?>? TVNew,
+      @JsonKey(name: 'TV (Continuing)')
+      final List<GetSeasonalAnimesTVContinuingModel?>? TVContinuing,
+      @JsonKey(name: 'ONA') final List<GetSeasonalAnimesONAModel?>? ONA,
+      @JsonKey(name: 'OVA') final List<GetSeasonalAnimesOVAModel?>? OVA,
+      @JsonKey(name: 'Movie') final List<GetSeasonalAnimesMovieModel?>? Movie,
+      @JsonKey(name: 'Special')
+      final List<GetSeasonalAnimesSpecialModel?>?
+          Special}) = _$GetSeasonalAnimesModelImpl;
 
   factory _GetSeasonalAnimesModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesModelImpl.fromJson;
@@ -279,33 +343,21 @@ abstract class _GetSeasonalAnimesModel implements GetSeasonalAnimesModel {
   @override
   @JsonKey(name: 'TV (New)')
   List<GetSeasonalAnimesTVNewModel?>? get TVNew;
-  @JsonKey(name: 'TV (New)')
-  set TVNew(List<GetSeasonalAnimesTVNewModel?>? value);
   @override
   @JsonKey(name: 'TV (Continuing)')
   List<GetSeasonalAnimesTVContinuingModel?>? get TVContinuing;
-  @JsonKey(name: 'TV (Continuing)')
-  set TVContinuing(List<GetSeasonalAnimesTVContinuingModel?>? value);
   @override
   @JsonKey(name: 'ONA')
   List<GetSeasonalAnimesONAModel?>? get ONA;
-  @JsonKey(name: 'ONA')
-  set ONA(List<GetSeasonalAnimesONAModel?>? value);
   @override
   @JsonKey(name: 'OVA')
   List<GetSeasonalAnimesOVAModel?>? get OVA;
-  @JsonKey(name: 'OVA')
-  set OVA(List<GetSeasonalAnimesOVAModel?>? value);
   @override
   @JsonKey(name: 'Movie')
   List<GetSeasonalAnimesMovieModel?>? get Movie;
-  @JsonKey(name: 'Movie')
-  set Movie(List<GetSeasonalAnimesMovieModel?>? value);
   @override
   @JsonKey(name: 'Special')
   List<GetSeasonalAnimesSpecialModel?>? get Special;
-  @JsonKey(name: 'Special')
-  set Special(List<GetSeasonalAnimesSpecialModel?>? value);
 
   /// Create a copy of GetSeasonalAnimesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -323,36 +375,20 @@ GetSeasonalAnimesTVNewModel _$GetSeasonalAnimesTVNewModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesTVNewGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesTVNewGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   String? get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(String? value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVNewDateModel? get date =>
       throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesTVNewDateModel? value) =>
-      throw _privateConstructorUsedError;
   int? get episodes => throw _privateConstructorUsedError;
-  set episodes(int? value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVNewPropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesTVNewPropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewModel to a JSON map.
@@ -574,7 +610,7 @@ class __$$GetSeasonalAnimesTVNewModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesTVNewGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -621,7 +657,7 @@ class _$GetSeasonalAnimesTVNewModelImpl
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesTVNewGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -629,42 +665,92 @@ class _$GetSeasonalAnimesTVNewModelImpl
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesTVNewModelImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesTVNewModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesTVNewGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesTVNewGenresModel?>? genres;
+  List<GetSeasonalAnimesTVNewGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  String? imageUrl;
+  final String? imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesTVNewDateModel? date;
+  final GetSeasonalAnimesTVNewDateModel? date;
   @override
-  int? episodes;
+  final int? episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesTVNewPropertiesModel? properties;
+  final GetSeasonalAnimesTVNewPropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      imageUrl,
+      score,
+      members,
+      synopsis,
+      date,
+      episodes,
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesTVNewModel
   /// with the given fields replaced by the non-null parameter values.
@@ -686,18 +772,18 @@ class _$GetSeasonalAnimesTVNewModelImpl
 abstract class _GetSeasonalAnimesTVNewModel
     implements GetSeasonalAnimesTVNewModel {
   factory _GetSeasonalAnimesTVNewModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesTVNewGenresModel?>? genres,
-          @JsonKey(name: 'image_url') String? imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesTVNewDateModel? date,
-          int? episodes,
-          int? duration,
-          GetSeasonalAnimesTVNewPropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesTVNewGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final String? imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesTVNewDateModel? date,
+          final int? episodes,
+          final int? duration,
+          final GetSeasonalAnimesTVNewPropertiesModel? properties}) =
       _$GetSeasonalAnimesTVNewModelImpl;
 
   factory _GetSeasonalAnimesTVNewModel.fromJson(Map<String, dynamic> json) =
@@ -705,42 +791,29 @@ abstract class _GetSeasonalAnimesTVNewModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesTVNewGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesTVNewGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   String? get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(String? value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesTVNewDateModel? get date;
-  set date(GetSeasonalAnimesTVNewDateModel? value);
   @override
   int? get episodes;
-  set episodes(int? value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesTVNewPropertiesModel? get properties;
-  set properties(GetSeasonalAnimesTVNewPropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewModel
   /// with the given fields replaced by the non-null parameter values.
@@ -758,9 +831,7 @@ GetSeasonalAnimesTVNewGenresModel _$GetSeasonalAnimesTVNewGenresModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -869,14 +940,27 @@ class _$GetSeasonalAnimesTVNewGenresModelImpl
       _$$GetSeasonalAnimesTVNewGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVNewGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -898,8 +982,9 @@ class _$GetSeasonalAnimesTVNewGenresModelImpl
 
 abstract class _GetSeasonalAnimesTVNewGenresModel
     implements GetSeasonalAnimesTVNewGenresModel {
-  factory _GetSeasonalAnimesTVNewGenresModel({String? name, String? url}) =
-      _$GetSeasonalAnimesTVNewGenresModelImpl;
+  factory _GetSeasonalAnimesTVNewGenresModel(
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesTVNewGenresModelImpl;
 
   factory _GetSeasonalAnimesTVNewGenresModel.fromJson(
           Map<String, dynamic> json) =
@@ -907,10 +992,8 @@ abstract class _GetSeasonalAnimesTVNewGenresModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -929,9 +1012,7 @@ GetSeasonalAnimesTVNewDateModel _$GetSeasonalAnimesTVNewDateModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewDateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewDateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1040,14 +1121,28 @@ class _$GetSeasonalAnimesTVNewDateModelImpl
       _$$GetSeasonalAnimesTVNewDateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewDateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewDateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesTVNewDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1069,18 +1164,17 @@ class _$GetSeasonalAnimesTVNewDateModelImpl
 
 abstract class _GetSeasonalAnimesTVNewDateModel
     implements GetSeasonalAnimesTVNewDateModel {
-  factory _GetSeasonalAnimesTVNewDateModel({String? date, double? timestamp}) =
-      _$GetSeasonalAnimesTVNewDateModelImpl;
+  factory _GetSeasonalAnimesTVNewDateModel(
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesTVNewDateModelImpl;
 
   factory _GetSeasonalAnimesTVNewDateModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesTVNewDateModelImpl.fromJson;
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1100,17 +1194,10 @@ GetSeasonalAnimesTVNewPropertiesModel
 mixin _$GetSeasonalAnimesTVNewPropertiesModel {
   GetSeasonalAnimesTVNewPropertiesStudioModel? get studio =>
       throw _privateConstructorUsedError;
-  set studio(GetSeasonalAnimesTVNewPropertiesStudioModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVNewPropertiesThemesModel? get themes =>
       throw _privateConstructorUsedError;
-  set themes(GetSeasonalAnimesTVNewPropertiesThemesModel? value) =>
-      throw _privateConstructorUsedError;
   GetSeasonalAnimesTVNewPropertiesDemographicModel? get demographic =>
-      throw _privateConstructorUsedError;
-  set demographic(GetSeasonalAnimesTVNewPropertiesDemographicModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewPropertiesModel to a JSON map.
@@ -1309,18 +1396,35 @@ class _$GetSeasonalAnimesTVNewPropertiesModelImpl
       _$$GetSeasonalAnimesTVNewPropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesTVNewPropertiesStudioModel? studio;
+  final GetSeasonalAnimesTVNewPropertiesStudioModel? studio;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesTVNewPropertiesThemesModel? themes;
+  final GetSeasonalAnimesTVNewPropertiesThemesModel? themes;
   @override
-  GetSeasonalAnimesTVNewPropertiesDemographicModel? demographic;
+  final GetSeasonalAnimesTVNewPropertiesDemographicModel? demographic;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewPropertiesModel(studio: $studio, source: $source, themes: $themes, demographic: $demographic)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewPropertiesModelImpl &&
+            (identical(other.studio, studio) || other.studio == studio) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.themes, themes) || other.themes == themes) &&
+            (identical(other.demographic, demographic) ||
+                other.demographic == demographic));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, studio, source, themes, demographic);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1343,11 +1447,11 @@ class _$GetSeasonalAnimesTVNewPropertiesModelImpl
 abstract class _GetSeasonalAnimesTVNewPropertiesModel
     implements GetSeasonalAnimesTVNewPropertiesModel {
   factory _GetSeasonalAnimesTVNewPropertiesModel(
-          {GetSeasonalAnimesTVNewPropertiesStudioModel? studio,
-          String? source,
-          GetSeasonalAnimesTVNewPropertiesThemesModel? themes,
-          GetSeasonalAnimesTVNewPropertiesDemographicModel? demographic}) =
-      _$GetSeasonalAnimesTVNewPropertiesModelImpl;
+      {final GetSeasonalAnimesTVNewPropertiesStudioModel? studio,
+      final String? source,
+      final GetSeasonalAnimesTVNewPropertiesThemesModel? themes,
+      final GetSeasonalAnimesTVNewPropertiesDemographicModel?
+          demographic}) = _$GetSeasonalAnimesTVNewPropertiesModelImpl;
 
   factory _GetSeasonalAnimesTVNewPropertiesModel.fromJson(
           Map<String, dynamic> json) =
@@ -1355,16 +1459,12 @@ abstract class _GetSeasonalAnimesTVNewPropertiesModel
 
   @override
   GetSeasonalAnimesTVNewPropertiesStudioModel? get studio;
-  set studio(GetSeasonalAnimesTVNewPropertiesStudioModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesTVNewPropertiesThemesModel? get themes;
-  set themes(GetSeasonalAnimesTVNewPropertiesThemesModel? value);
   @override
   GetSeasonalAnimesTVNewPropertiesDemographicModel? get demographic;
-  set demographic(GetSeasonalAnimesTVNewPropertiesDemographicModel? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1384,9 +1484,7 @@ GetSeasonalAnimesTVNewPropertiesStudioModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewPropertiesStudioModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewPropertiesStudioModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1499,14 +1597,27 @@ class _$GetSeasonalAnimesTVNewPropertiesStudioModelImpl
       _$$GetSeasonalAnimesTVNewPropertiesStudioModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewPropertiesStudioModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewPropertiesStudioModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1531,8 +1642,8 @@ class _$GetSeasonalAnimesTVNewPropertiesStudioModelImpl
 abstract class _GetSeasonalAnimesTVNewPropertiesStudioModel
     implements GetSeasonalAnimesTVNewPropertiesStudioModel {
   factory _GetSeasonalAnimesTVNewPropertiesStudioModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesTVNewPropertiesStudioModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesTVNewPropertiesStudioModelImpl;
 
   factory _GetSeasonalAnimesTVNewPropertiesStudioModel.fromJson(
           Map<String, dynamic> json) =
@@ -1540,10 +1651,8 @@ abstract class _GetSeasonalAnimesTVNewPropertiesStudioModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1563,9 +1672,7 @@ GetSeasonalAnimesTVNewPropertiesThemesModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewPropertiesThemesModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewPropertiesThemesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1678,14 +1785,27 @@ class _$GetSeasonalAnimesTVNewPropertiesThemesModelImpl
       _$$GetSeasonalAnimesTVNewPropertiesThemesModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewPropertiesThemesModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewPropertiesThemesModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1710,8 +1830,8 @@ class _$GetSeasonalAnimesTVNewPropertiesThemesModelImpl
 abstract class _GetSeasonalAnimesTVNewPropertiesThemesModel
     implements GetSeasonalAnimesTVNewPropertiesThemesModel {
   factory _GetSeasonalAnimesTVNewPropertiesThemesModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesTVNewPropertiesThemesModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesTVNewPropertiesThemesModelImpl;
 
   factory _GetSeasonalAnimesTVNewPropertiesThemesModel.fromJson(
           Map<String, dynamic> json) =
@@ -1719,10 +1839,8 @@ abstract class _GetSeasonalAnimesTVNewPropertiesThemesModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1742,9 +1860,7 @@ GetSeasonalAnimesTVNewPropertiesDemographicModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVNewPropertiesDemographicModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVNewPropertiesDemographicModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1861,14 +1977,27 @@ class _$GetSeasonalAnimesTVNewPropertiesDemographicModelImpl
       _$$GetSeasonalAnimesTVNewPropertiesDemographicModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVNewPropertiesDemographicModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVNewPropertiesDemographicModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1893,8 +2022,8 @@ class _$GetSeasonalAnimesTVNewPropertiesDemographicModelImpl
 abstract class _GetSeasonalAnimesTVNewPropertiesDemographicModel
     implements GetSeasonalAnimesTVNewPropertiesDemographicModel {
   factory _GetSeasonalAnimesTVNewPropertiesDemographicModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesTVNewPropertiesDemographicModelImpl;
+          {final String? name, final String? url}) =
+      _$GetSeasonalAnimesTVNewPropertiesDemographicModelImpl;
 
   factory _GetSeasonalAnimesTVNewPropertiesDemographicModel.fromJson(
           Map<String, dynamic> json) =
@@ -1902,10 +2031,8 @@ abstract class _GetSeasonalAnimesTVNewPropertiesDemographicModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVNewPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1924,36 +2051,20 @@ GetSeasonalAnimesTVContinuingModel _$GetSeasonalAnimesTVContinuingModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesTVContinuingModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesTVContinuingGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesTVContinuingGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   dynamic get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVContinuingDateModel? get date =>
       throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesTVContinuingDateModel? value) =>
-      throw _privateConstructorUsedError;
   dynamic get episodes => throw _privateConstructorUsedError;
-  set episodes(dynamic value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVContinuingPropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesTVContinuingPropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingModel to a JSON map.
@@ -2176,7 +2287,7 @@ class __$$GetSeasonalAnimesTVContinuingModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesTVContinuingGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -2223,7 +2334,7 @@ class _$GetSeasonalAnimesTVContinuingModelImpl
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesTVContinuingGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -2231,42 +2342,90 @@ class _$GetSeasonalAnimesTVContinuingModelImpl
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesTVContinuingModelImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesTVContinuingModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesTVContinuingGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesTVContinuingGenresModel?>? genres;
+  List<GetSeasonalAnimesTVContinuingGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  dynamic imageUrl;
+  final dynamic imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesTVContinuingDateModel? date;
+  final GetSeasonalAnimesTVContinuingDateModel? date;
   @override
-  dynamic episodes;
+  final dynamic episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesTVContinuingPropertiesModel? properties;
+  final GetSeasonalAnimesTVContinuingPropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVContinuingModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            const DeepCollectionEquality().equals(other.episodes, episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(imageUrl),
+      score,
+      members,
+      synopsis,
+      date,
+      const DeepCollectionEquality().hash(episodes),
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2289,18 +2448,18 @@ class _$GetSeasonalAnimesTVContinuingModelImpl
 abstract class _GetSeasonalAnimesTVContinuingModel
     implements GetSeasonalAnimesTVContinuingModel {
   factory _GetSeasonalAnimesTVContinuingModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesTVContinuingGenresModel?>? genres,
-          @JsonKey(name: 'image_url') dynamic imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesTVContinuingDateModel? date,
-          dynamic episodes,
-          int? duration,
-          GetSeasonalAnimesTVContinuingPropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesTVContinuingGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final dynamic imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesTVContinuingDateModel? date,
+          final dynamic episodes,
+          final int? duration,
+          final GetSeasonalAnimesTVContinuingPropertiesModel? properties}) =
       _$GetSeasonalAnimesTVContinuingModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingModel.fromJson(
@@ -2309,42 +2468,29 @@ abstract class _GetSeasonalAnimesTVContinuingModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesTVContinuingGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesTVContinuingGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   dynamic get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesTVContinuingDateModel? get date;
-  set date(GetSeasonalAnimesTVContinuingDateModel? value);
   @override
   dynamic get episodes;
-  set episodes(dynamic value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesTVContinuingPropertiesModel? get properties;
-  set properties(GetSeasonalAnimesTVContinuingPropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2364,9 +2510,7 @@ GetSeasonalAnimesTVContinuingGenresModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVContinuingGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2477,14 +2621,27 @@ class _$GetSeasonalAnimesTVContinuingGenresModelImpl
       _$$GetSeasonalAnimesTVContinuingGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVContinuingGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2508,8 +2665,8 @@ class _$GetSeasonalAnimesTVContinuingGenresModelImpl
 abstract class _GetSeasonalAnimesTVContinuingGenresModel
     implements GetSeasonalAnimesTVContinuingGenresModel {
   factory _GetSeasonalAnimesTVContinuingGenresModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesTVContinuingGenresModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesTVContinuingGenresModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingGenresModel.fromJson(
           Map<String, dynamic> json) =
@@ -2517,10 +2674,8 @@ abstract class _GetSeasonalAnimesTVContinuingGenresModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2540,9 +2695,7 @@ GetSeasonalAnimesTVContinuingDateModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVContinuingDateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingDateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2652,14 +2805,28 @@ class _$GetSeasonalAnimesTVContinuingDateModelImpl
       _$$GetSeasonalAnimesTVContinuingDateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingDateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVContinuingDateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2683,8 +2850,8 @@ class _$GetSeasonalAnimesTVContinuingDateModelImpl
 abstract class _GetSeasonalAnimesTVContinuingDateModel
     implements GetSeasonalAnimesTVContinuingDateModel {
   factory _GetSeasonalAnimesTVContinuingDateModel(
-      {String? date,
-      double? timestamp}) = _$GetSeasonalAnimesTVContinuingDateModelImpl;
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesTVContinuingDateModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingDateModel.fromJson(
           Map<String, dynamic> json) =
@@ -2692,10 +2859,8 @@ abstract class _GetSeasonalAnimesTVContinuingDateModel
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2716,14 +2881,8 @@ GetSeasonalAnimesTVContinuingPropertiesModel
 mixin _$GetSeasonalAnimesTVContinuingPropertiesModel {
   GetSeasonalAnimesTVContinuingPropertiesStudioModel? get studio =>
       throw _privateConstructorUsedError;
-  set studio(GetSeasonalAnimesTVContinuingPropertiesStudioModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesTVContinuingPropertiesDemographicModel? get demographic =>
-      throw _privateConstructorUsedError;
-  set demographic(
-          GetSeasonalAnimesTVContinuingPropertiesDemographicModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingPropertiesModel to a JSON map.
@@ -2896,16 +3055,31 @@ class _$GetSeasonalAnimesTVContinuingPropertiesModelImpl
       _$$GetSeasonalAnimesTVContinuingPropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesTVContinuingPropertiesStudioModel? studio;
+  final GetSeasonalAnimesTVContinuingPropertiesStudioModel? studio;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesTVContinuingPropertiesDemographicModel? demographic;
+  final GetSeasonalAnimesTVContinuingPropertiesDemographicModel? demographic;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingPropertiesModel(studio: $studio, source: $source, demographic: $demographic)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVContinuingPropertiesModelImpl &&
+            (identical(other.studio, studio) || other.studio == studio) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.demographic, demographic) ||
+                other.demographic == demographic));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, studio, source, demographic);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2930,9 +3104,9 @@ class _$GetSeasonalAnimesTVContinuingPropertiesModelImpl
 abstract class _GetSeasonalAnimesTVContinuingPropertiesModel
     implements GetSeasonalAnimesTVContinuingPropertiesModel {
   factory _GetSeasonalAnimesTVContinuingPropertiesModel(
-      {GetSeasonalAnimesTVContinuingPropertiesStudioModel? studio,
-      String? source,
-      GetSeasonalAnimesTVContinuingPropertiesDemographicModel?
+      {final GetSeasonalAnimesTVContinuingPropertiesStudioModel? studio,
+      final String? source,
+      final GetSeasonalAnimesTVContinuingPropertiesDemographicModel?
           demographic}) = _$GetSeasonalAnimesTVContinuingPropertiesModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingPropertiesModel.fromJson(
@@ -2941,14 +3115,10 @@ abstract class _GetSeasonalAnimesTVContinuingPropertiesModel
 
   @override
   GetSeasonalAnimesTVContinuingPropertiesStudioModel? get studio;
-  set studio(GetSeasonalAnimesTVContinuingPropertiesStudioModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesTVContinuingPropertiesDemographicModel? get demographic;
-  set demographic(
-      GetSeasonalAnimesTVContinuingPropertiesDemographicModel? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2968,9 +3138,7 @@ GetSeasonalAnimesTVContinuingPropertiesStudioModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVContinuingPropertiesStudioModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingPropertiesStudioModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3094,14 +3262,27 @@ class _$GetSeasonalAnimesTVContinuingPropertiesStudioModelImpl
       _$$GetSeasonalAnimesTVContinuingPropertiesStudioModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingPropertiesStudioModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesTVContinuingPropertiesStudioModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3126,8 +3307,8 @@ class _$GetSeasonalAnimesTVContinuingPropertiesStudioModelImpl
 abstract class _GetSeasonalAnimesTVContinuingPropertiesStudioModel
     implements GetSeasonalAnimesTVContinuingPropertiesStudioModel {
   factory _GetSeasonalAnimesTVContinuingPropertiesStudioModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesTVContinuingPropertiesStudioModelImpl;
+          {final String? name, final String? url}) =
+      _$GetSeasonalAnimesTVContinuingPropertiesStudioModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingPropertiesStudioModel.fromJson(
           Map<String, dynamic> json) =
@@ -3135,10 +3316,8 @@ abstract class _GetSeasonalAnimesTVContinuingPropertiesStudioModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3159,9 +3338,7 @@ GetSeasonalAnimesTVContinuingPropertiesDemographicModel
 /// @nodoc
 mixin _$GetSeasonalAnimesTVContinuingPropertiesDemographicModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesTVContinuingPropertiesDemographicModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3288,14 +3465,28 @@ class _$GetSeasonalAnimesTVContinuingPropertiesDemographicModelImpl
           json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesTVContinuingPropertiesDemographicModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other
+                is _$GetSeasonalAnimesTVContinuingPropertiesDemographicModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3320,7 +3511,7 @@ class _$GetSeasonalAnimesTVContinuingPropertiesDemographicModelImpl
 abstract class _GetSeasonalAnimesTVContinuingPropertiesDemographicModel
     implements GetSeasonalAnimesTVContinuingPropertiesDemographicModel {
   factory _GetSeasonalAnimesTVContinuingPropertiesDemographicModel(
-          {String? name, String? url}) =
+          {final String? name, final String? url}) =
       _$GetSeasonalAnimesTVContinuingPropertiesDemographicModelImpl;
 
   factory _GetSeasonalAnimesTVContinuingPropertiesDemographicModel.fromJson(
@@ -3329,10 +3520,8 @@ abstract class _GetSeasonalAnimesTVContinuingPropertiesDemographicModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesTVContinuingPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3351,35 +3540,19 @@ GetSeasonalAnimesONAModel _$GetSeasonalAnimesONAModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesONAModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesONAGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesONAGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   dynamic get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesONADateModel? get date => throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesONADateModel? value) =>
-      throw _privateConstructorUsedError;
   int? get episodes => throw _privateConstructorUsedError;
-  set episodes(int? value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesONAPropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesONAPropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAModel to a JSON map.
@@ -3598,7 +3771,7 @@ class __$$GetSeasonalAnimesONAModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesONAGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -3644,7 +3817,7 @@ class _$GetSeasonalAnimesONAModelImpl implements _GetSeasonalAnimesONAModel {
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesONAGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -3652,41 +3825,90 @@ class _$GetSeasonalAnimesONAModelImpl implements _GetSeasonalAnimesONAModel {
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesONAModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesONAModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesONAGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesONAGenresModel?>? genres;
+  List<GetSeasonalAnimesONAGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  dynamic imageUrl;
+  final dynamic imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesONADateModel? date;
+  final GetSeasonalAnimesONADateModel? date;
   @override
-  int? episodes;
+  final int? episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesONAPropertiesModel? properties;
+  final GetSeasonalAnimesONAPropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(imageUrl),
+      score,
+      members,
+      synopsis,
+      date,
+      episodes,
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesONAModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3707,18 +3929,18 @@ class _$GetSeasonalAnimesONAModelImpl implements _GetSeasonalAnimesONAModel {
 
 abstract class _GetSeasonalAnimesONAModel implements GetSeasonalAnimesONAModel {
   factory _GetSeasonalAnimesONAModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesONAGenresModel?>? genres,
-          @JsonKey(name: 'image_url') dynamic imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesONADateModel? date,
-          int? episodes,
-          int? duration,
-          GetSeasonalAnimesONAPropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesONAGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final dynamic imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesONADateModel? date,
+          final int? episodes,
+          final int? duration,
+          final GetSeasonalAnimesONAPropertiesModel? properties}) =
       _$GetSeasonalAnimesONAModelImpl;
 
   factory _GetSeasonalAnimesONAModel.fromJson(Map<String, dynamic> json) =
@@ -3726,42 +3948,29 @@ abstract class _GetSeasonalAnimesONAModel implements GetSeasonalAnimesONAModel {
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesONAGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesONAGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   dynamic get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesONADateModel? get date;
-  set date(GetSeasonalAnimesONADateModel? value);
   @override
   int? get episodes;
-  set episodes(int? value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesONAPropertiesModel? get properties;
-  set properties(GetSeasonalAnimesONAPropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesONAModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3779,9 +3988,7 @@ GetSeasonalAnimesONAGenresModel _$GetSeasonalAnimesONAGenresModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesONAGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3890,14 +4097,27 @@ class _$GetSeasonalAnimesONAGenresModelImpl
       _$$GetSeasonalAnimesONAGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesONAGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3919,18 +4139,17 @@ class _$GetSeasonalAnimesONAGenresModelImpl
 
 abstract class _GetSeasonalAnimesONAGenresModel
     implements GetSeasonalAnimesONAGenresModel {
-  factory _GetSeasonalAnimesONAGenresModel({String? name, String? url}) =
-      _$GetSeasonalAnimesONAGenresModelImpl;
+  factory _GetSeasonalAnimesONAGenresModel(
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesONAGenresModelImpl;
 
   factory _GetSeasonalAnimesONAGenresModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesONAGenresModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesONAGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -3949,9 +4168,7 @@ GetSeasonalAnimesONADateModel _$GetSeasonalAnimesONADateModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesONADateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONADateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4060,14 +4277,28 @@ class _$GetSeasonalAnimesONADateModelImpl
       _$$GetSeasonalAnimesONADateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONADateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONADateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesONADateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4089,18 +4320,17 @@ class _$GetSeasonalAnimesONADateModelImpl
 
 abstract class _GetSeasonalAnimesONADateModel
     implements GetSeasonalAnimesONADateModel {
-  factory _GetSeasonalAnimesONADateModel({String? date, double? timestamp}) =
-      _$GetSeasonalAnimesONADateModelImpl;
+  factory _GetSeasonalAnimesONADateModel(
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesONADateModelImpl;
 
   factory _GetSeasonalAnimesONADateModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesONADateModelImpl.fromJson;
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesONADateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4120,17 +4350,10 @@ GetSeasonalAnimesONAPropertiesModel
 mixin _$GetSeasonalAnimesONAPropertiesModel {
   GetSeasonalAnimesONAPropertiesStudiosModel? get studios =>
       throw _privateConstructorUsedError;
-  set studios(GetSeasonalAnimesONAPropertiesStudiosModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesONAPropertiesThemesModel? get themes =>
       throw _privateConstructorUsedError;
-  set themes(GetSeasonalAnimesONAPropertiesThemesModel? value) =>
-      throw _privateConstructorUsedError;
   GetSeasonalAnimesONAPropertiesDemographicModel? get demographic =>
-      throw _privateConstructorUsedError;
-  set demographic(GetSeasonalAnimesONAPropertiesDemographicModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAPropertiesModel to a JSON map.
@@ -4329,18 +4552,35 @@ class _$GetSeasonalAnimesONAPropertiesModelImpl
       _$$GetSeasonalAnimesONAPropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesONAPropertiesStudiosModel? studios;
+  final GetSeasonalAnimesONAPropertiesStudiosModel? studios;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesONAPropertiesThemesModel? themes;
+  final GetSeasonalAnimesONAPropertiesThemesModel? themes;
   @override
-  GetSeasonalAnimesONAPropertiesDemographicModel? demographic;
+  final GetSeasonalAnimesONAPropertiesDemographicModel? demographic;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAPropertiesModel(studios: $studios, source: $source, themes: $themes, demographic: $demographic)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAPropertiesModelImpl &&
+            (identical(other.studios, studios) || other.studios == studios) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.themes, themes) || other.themes == themes) &&
+            (identical(other.demographic, demographic) ||
+                other.demographic == demographic));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, studios, source, themes, demographic);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4363,10 +4603,10 @@ class _$GetSeasonalAnimesONAPropertiesModelImpl
 abstract class _GetSeasonalAnimesONAPropertiesModel
     implements GetSeasonalAnimesONAPropertiesModel {
   factory _GetSeasonalAnimesONAPropertiesModel(
-          {GetSeasonalAnimesONAPropertiesStudiosModel? studios,
-          String? source,
-          GetSeasonalAnimesONAPropertiesThemesModel? themes,
-          GetSeasonalAnimesONAPropertiesDemographicModel? demographic}) =
+          {final GetSeasonalAnimesONAPropertiesStudiosModel? studios,
+          final String? source,
+          final GetSeasonalAnimesONAPropertiesThemesModel? themes,
+          final GetSeasonalAnimesONAPropertiesDemographicModel? demographic}) =
       _$GetSeasonalAnimesONAPropertiesModelImpl;
 
   factory _GetSeasonalAnimesONAPropertiesModel.fromJson(
@@ -4375,16 +4615,12 @@ abstract class _GetSeasonalAnimesONAPropertiesModel
 
   @override
   GetSeasonalAnimesONAPropertiesStudiosModel? get studios;
-  set studios(GetSeasonalAnimesONAPropertiesStudiosModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesONAPropertiesThemesModel? get themes;
-  set themes(GetSeasonalAnimesONAPropertiesThemesModel? value);
   @override
   GetSeasonalAnimesONAPropertiesDemographicModel? get demographic;
-  set demographic(GetSeasonalAnimesONAPropertiesDemographicModel? value);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4404,9 +4640,7 @@ GetSeasonalAnimesONAPropertiesStudiosModel
 /// @nodoc
 mixin _$GetSeasonalAnimesONAPropertiesStudiosModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAPropertiesStudiosModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4518,14 +4752,27 @@ class _$GetSeasonalAnimesONAPropertiesStudiosModelImpl
       _$$GetSeasonalAnimesONAPropertiesStudiosModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAPropertiesStudiosModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAPropertiesStudiosModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesStudiosModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4550,8 +4797,8 @@ class _$GetSeasonalAnimesONAPropertiesStudiosModelImpl
 abstract class _GetSeasonalAnimesONAPropertiesStudiosModel
     implements GetSeasonalAnimesONAPropertiesStudiosModel {
   factory _GetSeasonalAnimesONAPropertiesStudiosModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesONAPropertiesStudiosModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesONAPropertiesStudiosModelImpl;
 
   factory _GetSeasonalAnimesONAPropertiesStudiosModel.fromJson(
           Map<String, dynamic> json) =
@@ -4559,10 +4806,8 @@ abstract class _GetSeasonalAnimesONAPropertiesStudiosModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesStudiosModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4582,9 +4827,7 @@ GetSeasonalAnimesONAPropertiesThemesModel
 /// @nodoc
 mixin _$GetSeasonalAnimesONAPropertiesThemesModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAPropertiesThemesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4695,14 +4938,27 @@ class _$GetSeasonalAnimesONAPropertiesThemesModelImpl
       _$$GetSeasonalAnimesONAPropertiesThemesModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAPropertiesThemesModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAPropertiesThemesModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4727,8 +4983,8 @@ class _$GetSeasonalAnimesONAPropertiesThemesModelImpl
 abstract class _GetSeasonalAnimesONAPropertiesThemesModel
     implements GetSeasonalAnimesONAPropertiesThemesModel {
   factory _GetSeasonalAnimesONAPropertiesThemesModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesONAPropertiesThemesModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesONAPropertiesThemesModelImpl;
 
   factory _GetSeasonalAnimesONAPropertiesThemesModel.fromJson(
           Map<String, dynamic> json) =
@@ -4736,10 +4992,8 @@ abstract class _GetSeasonalAnimesONAPropertiesThemesModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4759,9 +5013,7 @@ GetSeasonalAnimesONAPropertiesDemographicModel
 /// @nodoc
 mixin _$GetSeasonalAnimesONAPropertiesDemographicModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesONAPropertiesDemographicModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4875,14 +5127,27 @@ class _$GetSeasonalAnimesONAPropertiesDemographicModelImpl
       _$$GetSeasonalAnimesONAPropertiesDemographicModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesONAPropertiesDemographicModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesONAPropertiesDemographicModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4907,8 +5172,8 @@ class _$GetSeasonalAnimesONAPropertiesDemographicModelImpl
 abstract class _GetSeasonalAnimesONAPropertiesDemographicModel
     implements GetSeasonalAnimesONAPropertiesDemographicModel {
   factory _GetSeasonalAnimesONAPropertiesDemographicModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesONAPropertiesDemographicModelImpl;
+          {final String? name, final String? url}) =
+      _$GetSeasonalAnimesONAPropertiesDemographicModelImpl;
 
   factory _GetSeasonalAnimesONAPropertiesDemographicModel.fromJson(
           Map<String, dynamic> json) =
@@ -4916,10 +5181,8 @@ abstract class _GetSeasonalAnimesONAPropertiesDemographicModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesONAPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -4938,35 +5201,19 @@ GetSeasonalAnimesOVAModel _$GetSeasonalAnimesOVAModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesOVAModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesOVAGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesOVAGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   dynamic get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesOVADateModel? get date => throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesOVADateModel? value) =>
-      throw _privateConstructorUsedError;
   int? get episodes => throw _privateConstructorUsedError;
-  set episodes(int? value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesOVAPropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesOVAPropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVAModel to a JSON map.
@@ -5185,7 +5432,7 @@ class __$$GetSeasonalAnimesOVAModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesOVAGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -5231,7 +5478,7 @@ class _$GetSeasonalAnimesOVAModelImpl implements _GetSeasonalAnimesOVAModel {
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesOVAGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -5239,41 +5486,90 @@ class _$GetSeasonalAnimesOVAModelImpl implements _GetSeasonalAnimesOVAModel {
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesOVAModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesOVAModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesOVAGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesOVAGenresModel?>? genres;
+  List<GetSeasonalAnimesOVAGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  dynamic imageUrl;
+  final dynamic imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesOVADateModel? date;
+  final GetSeasonalAnimesOVADateModel? date;
   @override
-  int? episodes;
+  final int? episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesOVAPropertiesModel? properties;
+  final GetSeasonalAnimesOVAPropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVAModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVAModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(imageUrl),
+      score,
+      members,
+      synopsis,
+      date,
+      episodes,
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesOVAModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5294,18 +5590,18 @@ class _$GetSeasonalAnimesOVAModelImpl implements _GetSeasonalAnimesOVAModel {
 
 abstract class _GetSeasonalAnimesOVAModel implements GetSeasonalAnimesOVAModel {
   factory _GetSeasonalAnimesOVAModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesOVAGenresModel?>? genres,
-          @JsonKey(name: 'image_url') dynamic imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesOVADateModel? date,
-          int? episodes,
-          int? duration,
-          GetSeasonalAnimesOVAPropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesOVAGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final dynamic imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesOVADateModel? date,
+          final int? episodes,
+          final int? duration,
+          final GetSeasonalAnimesOVAPropertiesModel? properties}) =
       _$GetSeasonalAnimesOVAModelImpl;
 
   factory _GetSeasonalAnimesOVAModel.fromJson(Map<String, dynamic> json) =
@@ -5313,42 +5609,29 @@ abstract class _GetSeasonalAnimesOVAModel implements GetSeasonalAnimesOVAModel {
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesOVAGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesOVAGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   dynamic get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesOVADateModel? get date;
-  set date(GetSeasonalAnimesOVADateModel? value);
   @override
   int? get episodes;
-  set episodes(int? value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesOVAPropertiesModel? get properties;
-  set properties(GetSeasonalAnimesOVAPropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesOVAModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5366,9 +5649,7 @@ GetSeasonalAnimesOVAGenresModel _$GetSeasonalAnimesOVAGenresModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesOVAGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVAGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5477,14 +5758,27 @@ class _$GetSeasonalAnimesOVAGenresModelImpl
       _$$GetSeasonalAnimesOVAGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVAGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVAGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesOVAGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5506,18 +5800,17 @@ class _$GetSeasonalAnimesOVAGenresModelImpl
 
 abstract class _GetSeasonalAnimesOVAGenresModel
     implements GetSeasonalAnimesOVAGenresModel {
-  factory _GetSeasonalAnimesOVAGenresModel({String? name, String? url}) =
-      _$GetSeasonalAnimesOVAGenresModelImpl;
+  factory _GetSeasonalAnimesOVAGenresModel(
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesOVAGenresModelImpl;
 
   factory _GetSeasonalAnimesOVAGenresModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesOVAGenresModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesOVAGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5536,9 +5829,7 @@ GetSeasonalAnimesOVADateModel _$GetSeasonalAnimesOVADateModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesOVADateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVADateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5647,14 +5938,28 @@ class _$GetSeasonalAnimesOVADateModelImpl
       _$$GetSeasonalAnimesOVADateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVADateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVADateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesOVADateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5676,18 +5981,17 @@ class _$GetSeasonalAnimesOVADateModelImpl
 
 abstract class _GetSeasonalAnimesOVADateModel
     implements GetSeasonalAnimesOVADateModel {
-  factory _GetSeasonalAnimesOVADateModel({String? date, double? timestamp}) =
-      _$GetSeasonalAnimesOVADateModelImpl;
+  factory _GetSeasonalAnimesOVADateModel(
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesOVADateModelImpl;
 
   factory _GetSeasonalAnimesOVADateModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesOVADateModelImpl.fromJson;
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesOVADateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5707,13 +6011,8 @@ GetSeasonalAnimesOVAPropertiesModel
 mixin _$GetSeasonalAnimesOVAPropertiesModel {
   GetSeasonalAnimesOVAPropertiesStudioModel? get studio =>
       throw _privateConstructorUsedError;
-  set studio(GetSeasonalAnimesOVAPropertiesStudioModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesOVAPropertiesThemesModel? get themes =>
-      throw _privateConstructorUsedError;
-  set themes(GetSeasonalAnimesOVAPropertiesThemesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVAPropertiesModel to a JSON map.
@@ -5879,16 +6178,30 @@ class _$GetSeasonalAnimesOVAPropertiesModelImpl
       _$$GetSeasonalAnimesOVAPropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesOVAPropertiesStudioModel? studio;
+  final GetSeasonalAnimesOVAPropertiesStudioModel? studio;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesOVAPropertiesThemesModel? themes;
+  final GetSeasonalAnimesOVAPropertiesThemesModel? themes;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVAPropertiesModel(studio: $studio, source: $source, themes: $themes)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVAPropertiesModelImpl &&
+            (identical(other.studio, studio) || other.studio == studio) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.themes, themes) || other.themes == themes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, studio, source, themes);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5911,9 +6224,9 @@ class _$GetSeasonalAnimesOVAPropertiesModelImpl
 abstract class _GetSeasonalAnimesOVAPropertiesModel
     implements GetSeasonalAnimesOVAPropertiesModel {
   factory _GetSeasonalAnimesOVAPropertiesModel(
-          {GetSeasonalAnimesOVAPropertiesStudioModel? studio,
-          String? source,
-          GetSeasonalAnimesOVAPropertiesThemesModel? themes}) =
+          {final GetSeasonalAnimesOVAPropertiesStudioModel? studio,
+          final String? source,
+          final GetSeasonalAnimesOVAPropertiesThemesModel? themes}) =
       _$GetSeasonalAnimesOVAPropertiesModelImpl;
 
   factory _GetSeasonalAnimesOVAPropertiesModel.fromJson(
@@ -5922,13 +6235,10 @@ abstract class _GetSeasonalAnimesOVAPropertiesModel
 
   @override
   GetSeasonalAnimesOVAPropertiesStudioModel? get studio;
-  set studio(GetSeasonalAnimesOVAPropertiesStudioModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesOVAPropertiesThemesModel? get themes;
-  set themes(GetSeasonalAnimesOVAPropertiesThemesModel? value);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -5948,9 +6258,7 @@ GetSeasonalAnimesOVAPropertiesStudioModel
 /// @nodoc
 mixin _$GetSeasonalAnimesOVAPropertiesStudioModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVAPropertiesStudioModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6061,14 +6369,27 @@ class _$GetSeasonalAnimesOVAPropertiesStudioModelImpl
       _$$GetSeasonalAnimesOVAPropertiesStudioModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVAPropertiesStudioModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVAPropertiesStudioModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6093,8 +6414,8 @@ class _$GetSeasonalAnimesOVAPropertiesStudioModelImpl
 abstract class _GetSeasonalAnimesOVAPropertiesStudioModel
     implements GetSeasonalAnimesOVAPropertiesStudioModel {
   factory _GetSeasonalAnimesOVAPropertiesStudioModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesOVAPropertiesStudioModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesOVAPropertiesStudioModelImpl;
 
   factory _GetSeasonalAnimesOVAPropertiesStudioModel.fromJson(
           Map<String, dynamic> json) =
@@ -6102,10 +6423,8 @@ abstract class _GetSeasonalAnimesOVAPropertiesStudioModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6125,9 +6444,7 @@ GetSeasonalAnimesOVAPropertiesThemesModel
 /// @nodoc
 mixin _$GetSeasonalAnimesOVAPropertiesThemesModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesOVAPropertiesThemesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6238,14 +6555,27 @@ class _$GetSeasonalAnimesOVAPropertiesThemesModelImpl
       _$$GetSeasonalAnimesOVAPropertiesThemesModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesOVAPropertiesThemesModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesOVAPropertiesThemesModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6270,8 +6600,8 @@ class _$GetSeasonalAnimesOVAPropertiesThemesModelImpl
 abstract class _GetSeasonalAnimesOVAPropertiesThemesModel
     implements GetSeasonalAnimesOVAPropertiesThemesModel {
   factory _GetSeasonalAnimesOVAPropertiesThemesModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesOVAPropertiesThemesModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesOVAPropertiesThemesModelImpl;
 
   factory _GetSeasonalAnimesOVAPropertiesThemesModel.fromJson(
           Map<String, dynamic> json) =
@@ -6279,10 +6609,8 @@ abstract class _GetSeasonalAnimesOVAPropertiesThemesModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesOVAPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6301,36 +6629,20 @@ GetSeasonalAnimesMovieModel _$GetSeasonalAnimesMovieModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesMovieModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesMovieGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesMovieGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   dynamic get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesMovieDateModel? get date =>
       throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesMovieDateModel? value) =>
-      throw _privateConstructorUsedError;
   int? get episodes => throw _privateConstructorUsedError;
-  set episodes(int? value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesMoviePropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesMoviePropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMovieModel to a JSON map.
@@ -6552,7 +6864,7 @@ class __$$GetSeasonalAnimesMovieModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesMovieGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -6599,7 +6911,7 @@ class _$GetSeasonalAnimesMovieModelImpl
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesMovieGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -6607,42 +6919,91 @@ class _$GetSeasonalAnimesMovieModelImpl
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesMovieModelImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesMovieModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesMovieGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesMovieGenresModel?>? genres;
+  List<GetSeasonalAnimesMovieGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  dynamic imageUrl;
+  final dynamic imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesMovieDateModel? date;
+  final GetSeasonalAnimesMovieDateModel? date;
   @override
-  int? episodes;
+  final int? episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesMoviePropertiesModel? properties;
+  final GetSeasonalAnimesMoviePropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMovieModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMovieModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(imageUrl),
+      score,
+      members,
+      synopsis,
+      date,
+      episodes,
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesMovieModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6664,18 +7025,18 @@ class _$GetSeasonalAnimesMovieModelImpl
 abstract class _GetSeasonalAnimesMovieModel
     implements GetSeasonalAnimesMovieModel {
   factory _GetSeasonalAnimesMovieModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesMovieGenresModel?>? genres,
-          @JsonKey(name: 'image_url') dynamic imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesMovieDateModel? date,
-          int? episodes,
-          int? duration,
-          GetSeasonalAnimesMoviePropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesMovieGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final dynamic imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesMovieDateModel? date,
+          final int? episodes,
+          final int? duration,
+          final GetSeasonalAnimesMoviePropertiesModel? properties}) =
       _$GetSeasonalAnimesMovieModelImpl;
 
   factory _GetSeasonalAnimesMovieModel.fromJson(Map<String, dynamic> json) =
@@ -6683,42 +7044,29 @@ abstract class _GetSeasonalAnimesMovieModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesMovieGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesMovieGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   dynamic get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesMovieDateModel? get date;
-  set date(GetSeasonalAnimesMovieDateModel? value);
   @override
   int? get episodes;
-  set episodes(int? value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesMoviePropertiesModel? get properties;
-  set properties(GetSeasonalAnimesMoviePropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesMovieModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6736,9 +7084,7 @@ GetSeasonalAnimesMovieGenresModel _$GetSeasonalAnimesMovieGenresModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesMovieGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMovieGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6847,14 +7193,27 @@ class _$GetSeasonalAnimesMovieGenresModelImpl
       _$$GetSeasonalAnimesMovieGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMovieGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMovieGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesMovieGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6876,8 +7235,9 @@ class _$GetSeasonalAnimesMovieGenresModelImpl
 
 abstract class _GetSeasonalAnimesMovieGenresModel
     implements GetSeasonalAnimesMovieGenresModel {
-  factory _GetSeasonalAnimesMovieGenresModel({String? name, String? url}) =
-      _$GetSeasonalAnimesMovieGenresModelImpl;
+  factory _GetSeasonalAnimesMovieGenresModel(
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesMovieGenresModelImpl;
 
   factory _GetSeasonalAnimesMovieGenresModel.fromJson(
           Map<String, dynamic> json) =
@@ -6885,10 +7245,8 @@ abstract class _GetSeasonalAnimesMovieGenresModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesMovieGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -6907,9 +7265,7 @@ GetSeasonalAnimesMovieDateModel _$GetSeasonalAnimesMovieDateModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesMovieDateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMovieDateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7018,14 +7374,28 @@ class _$GetSeasonalAnimesMovieDateModelImpl
       _$$GetSeasonalAnimesMovieDateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMovieDateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMovieDateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesMovieDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7047,18 +7417,17 @@ class _$GetSeasonalAnimesMovieDateModelImpl
 
 abstract class _GetSeasonalAnimesMovieDateModel
     implements GetSeasonalAnimesMovieDateModel {
-  factory _GetSeasonalAnimesMovieDateModel({String? date, double? timestamp}) =
-      _$GetSeasonalAnimesMovieDateModelImpl;
+  factory _GetSeasonalAnimesMovieDateModel(
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesMovieDateModelImpl;
 
   factory _GetSeasonalAnimesMovieDateModel.fromJson(Map<String, dynamic> json) =
       _$GetSeasonalAnimesMovieDateModelImpl.fromJson;
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesMovieDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7078,13 +7447,8 @@ GetSeasonalAnimesMoviePropertiesModel
 mixin _$GetSeasonalAnimesMoviePropertiesModel {
   GetSeasonalAnimesMoviePropertiesStudioModel? get studio =>
       throw _privateConstructorUsedError;
-  set studio(GetSeasonalAnimesMoviePropertiesStudioModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesMoviePropertiesThemesModel? get themes =>
-      throw _privateConstructorUsedError;
-  set themes(GetSeasonalAnimesMoviePropertiesThemesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMoviePropertiesModel to a JSON map.
@@ -7250,16 +7614,30 @@ class _$GetSeasonalAnimesMoviePropertiesModelImpl
       _$$GetSeasonalAnimesMoviePropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesMoviePropertiesStudioModel? studio;
+  final GetSeasonalAnimesMoviePropertiesStudioModel? studio;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesMoviePropertiesThemesModel? themes;
+  final GetSeasonalAnimesMoviePropertiesThemesModel? themes;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMoviePropertiesModel(studio: $studio, source: $source, themes: $themes)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMoviePropertiesModelImpl &&
+            (identical(other.studio, studio) || other.studio == studio) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.themes, themes) || other.themes == themes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, studio, source, themes);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7282,9 +7660,9 @@ class _$GetSeasonalAnimesMoviePropertiesModelImpl
 abstract class _GetSeasonalAnimesMoviePropertiesModel
     implements GetSeasonalAnimesMoviePropertiesModel {
   factory _GetSeasonalAnimesMoviePropertiesModel(
-          {GetSeasonalAnimesMoviePropertiesStudioModel? studio,
-          String? source,
-          GetSeasonalAnimesMoviePropertiesThemesModel? themes}) =
+          {final GetSeasonalAnimesMoviePropertiesStudioModel? studio,
+          final String? source,
+          final GetSeasonalAnimesMoviePropertiesThemesModel? themes}) =
       _$GetSeasonalAnimesMoviePropertiesModelImpl;
 
   factory _GetSeasonalAnimesMoviePropertiesModel.fromJson(
@@ -7293,13 +7671,10 @@ abstract class _GetSeasonalAnimesMoviePropertiesModel
 
   @override
   GetSeasonalAnimesMoviePropertiesStudioModel? get studio;
-  set studio(GetSeasonalAnimesMoviePropertiesStudioModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesMoviePropertiesThemesModel? get themes;
-  set themes(GetSeasonalAnimesMoviePropertiesThemesModel? value);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7319,9 +7694,7 @@ GetSeasonalAnimesMoviePropertiesStudioModel
 /// @nodoc
 mixin _$GetSeasonalAnimesMoviePropertiesStudioModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMoviePropertiesStudioModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7434,14 +7807,27 @@ class _$GetSeasonalAnimesMoviePropertiesStudioModelImpl
       _$$GetSeasonalAnimesMoviePropertiesStudioModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMoviePropertiesStudioModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMoviePropertiesStudioModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7466,8 +7852,8 @@ class _$GetSeasonalAnimesMoviePropertiesStudioModelImpl
 abstract class _GetSeasonalAnimesMoviePropertiesStudioModel
     implements GetSeasonalAnimesMoviePropertiesStudioModel {
   factory _GetSeasonalAnimesMoviePropertiesStudioModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesMoviePropertiesStudioModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesMoviePropertiesStudioModelImpl;
 
   factory _GetSeasonalAnimesMoviePropertiesStudioModel.fromJson(
           Map<String, dynamic> json) =
@@ -7475,10 +7861,8 @@ abstract class _GetSeasonalAnimesMoviePropertiesStudioModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7498,9 +7882,7 @@ GetSeasonalAnimesMoviePropertiesThemesModel
 /// @nodoc
 mixin _$GetSeasonalAnimesMoviePropertiesThemesModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesMoviePropertiesThemesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7613,14 +7995,27 @@ class _$GetSeasonalAnimesMoviePropertiesThemesModelImpl
       _$$GetSeasonalAnimesMoviePropertiesThemesModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesMoviePropertiesThemesModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesMoviePropertiesThemesModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7645,8 +8040,8 @@ class _$GetSeasonalAnimesMoviePropertiesThemesModelImpl
 abstract class _GetSeasonalAnimesMoviePropertiesThemesModel
     implements GetSeasonalAnimesMoviePropertiesThemesModel {
   factory _GetSeasonalAnimesMoviePropertiesThemesModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesMoviePropertiesThemesModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesMoviePropertiesThemesModelImpl;
 
   factory _GetSeasonalAnimesMoviePropertiesThemesModel.fromJson(
           Map<String, dynamic> json) =
@@ -7654,10 +8049,8 @@ abstract class _GetSeasonalAnimesMoviePropertiesThemesModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesMoviePropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -7676,36 +8069,20 @@ GetSeasonalAnimesSpecialModel _$GetSeasonalAnimesSpecialModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  set type(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
   List<GetSeasonalAnimesSpecialGenresModel?>? get genres =>
-      throw _privateConstructorUsedError;
-  set genres(List<GetSeasonalAnimesSpecialGenresModel?>? value) =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   dynamic get imageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value) => throw _privateConstructorUsedError;
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   double? get members => throw _privateConstructorUsedError;
-  set members(double? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesSpecialDateModel? get date =>
       throw _privateConstructorUsedError;
-  set date(GetSeasonalAnimesSpecialDateModel? value) =>
-      throw _privateConstructorUsedError;
   int? get episodes => throw _privateConstructorUsedError;
-  set episodes(int? value) => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
-  set duration(int? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesSpecialPropertiesModel? get properties =>
-      throw _privateConstructorUsedError;
-  set properties(GetSeasonalAnimesSpecialPropertiesModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialModel to a JSON map.
@@ -7927,7 +8304,7 @@ class __$$GetSeasonalAnimesSpecialModelImplCopyWithImpl<$Res>
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetSeasonalAnimesSpecialGenresModel?>?,
       imageUrl: freezed == imageUrl
@@ -7974,7 +8351,7 @@ class _$GetSeasonalAnimesSpecialModelImpl
       {this.title,
       this.type,
       this.url,
-      this.genres,
+      final List<GetSeasonalAnimesSpecialGenresModel?>? genres,
       @JsonKey(name: 'image_url') this.imageUrl,
       this.score,
       this.members,
@@ -7982,42 +8359,91 @@ class _$GetSeasonalAnimesSpecialModelImpl
       this.date,
       this.episodes,
       this.duration,
-      this.properties});
+      this.properties})
+      : _genres = genres;
 
   factory _$GetSeasonalAnimesSpecialModelImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GetSeasonalAnimesSpecialModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? type;
+  final String? type;
   @override
-  String? url;
+  final String? url;
+  final List<GetSeasonalAnimesSpecialGenresModel?>? _genres;
   @override
-  List<GetSeasonalAnimesSpecialGenresModel?>? genres;
+  List<GetSeasonalAnimesSpecialGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'image_url')
-  dynamic imageUrl;
+  final dynamic imageUrl;
   @override
-  double? score;
+  final double? score;
   @override
-  double? members;
+  final double? members;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
-  GetSeasonalAnimesSpecialDateModel? date;
+  final GetSeasonalAnimesSpecialDateModel? date;
   @override
-  int? episodes;
+  final int? episodes;
   @override
-  int? duration;
+  final int? duration;
   @override
-  GetSeasonalAnimesSpecialPropertiesModel? properties;
+  final GetSeasonalAnimesSpecialPropertiesModel? properties;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialModel(title: $title, type: $type, url: $url, genres: $genres, imageUrl: $imageUrl, score: $score, members: $members, synopsis: $synopsis, date: $date, episodes: $episodes, duration: $duration, properties: $properties)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.properties, properties) ||
+                other.properties == properties));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      type,
+      url,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(imageUrl),
+      score,
+      members,
+      synopsis,
+      date,
+      episodes,
+      duration,
+      properties);
 
   /// Create a copy of GetSeasonalAnimesSpecialModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8040,18 +8466,18 @@ class _$GetSeasonalAnimesSpecialModelImpl
 abstract class _GetSeasonalAnimesSpecialModel
     implements GetSeasonalAnimesSpecialModel {
   factory _GetSeasonalAnimesSpecialModel(
-          {String? title,
-          String? type,
-          String? url,
-          List<GetSeasonalAnimesSpecialGenresModel?>? genres,
-          @JsonKey(name: 'image_url') dynamic imageUrl,
-          double? score,
-          double? members,
-          String? synopsis,
-          GetSeasonalAnimesSpecialDateModel? date,
-          int? episodes,
-          int? duration,
-          GetSeasonalAnimesSpecialPropertiesModel? properties}) =
+          {final String? title,
+          final String? type,
+          final String? url,
+          final List<GetSeasonalAnimesSpecialGenresModel?>? genres,
+          @JsonKey(name: 'image_url') final dynamic imageUrl,
+          final double? score,
+          final double? members,
+          final String? synopsis,
+          final GetSeasonalAnimesSpecialDateModel? date,
+          final int? episodes,
+          final int? duration,
+          final GetSeasonalAnimesSpecialPropertiesModel? properties}) =
       _$GetSeasonalAnimesSpecialModelImpl;
 
   factory _GetSeasonalAnimesSpecialModel.fromJson(Map<String, dynamic> json) =
@@ -8059,42 +8485,29 @@ abstract class _GetSeasonalAnimesSpecialModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get type;
-  set type(String? value);
   @override
   String? get url;
-  set url(String? value);
   @override
   List<GetSeasonalAnimesSpecialGenresModel?>? get genres;
-  set genres(List<GetSeasonalAnimesSpecialGenresModel?>? value);
   @override
   @JsonKey(name: 'image_url')
   dynamic get imageUrl;
-  @JsonKey(name: 'image_url')
-  set imageUrl(dynamic value);
   @override
   double? get score;
-  set score(double? value);
   @override
   double? get members;
-  set members(double? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   GetSeasonalAnimesSpecialDateModel? get date;
-  set date(GetSeasonalAnimesSpecialDateModel? value);
   @override
   int? get episodes;
-  set episodes(int? value);
   @override
   int? get duration;
-  set duration(int? value);
   @override
   GetSeasonalAnimesSpecialPropertiesModel? get properties;
-  set properties(GetSeasonalAnimesSpecialPropertiesModel? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8113,9 +8526,7 @@ GetSeasonalAnimesSpecialGenresModel
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8225,14 +8636,27 @@ class _$GetSeasonalAnimesSpecialGenresModelImpl
       _$$GetSeasonalAnimesSpecialGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesSpecialGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8254,8 +8678,9 @@ class _$GetSeasonalAnimesSpecialGenresModelImpl
 
 abstract class _GetSeasonalAnimesSpecialGenresModel
     implements GetSeasonalAnimesSpecialGenresModel {
-  factory _GetSeasonalAnimesSpecialGenresModel({String? name, String? url}) =
-      _$GetSeasonalAnimesSpecialGenresModelImpl;
+  factory _GetSeasonalAnimesSpecialGenresModel(
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesSpecialGenresModelImpl;
 
   factory _GetSeasonalAnimesSpecialGenresModel.fromJson(
           Map<String, dynamic> json) =
@@ -8263,10 +8688,8 @@ abstract class _GetSeasonalAnimesSpecialGenresModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8285,9 +8708,7 @@ GetSeasonalAnimesSpecialDateModel _$GetSeasonalAnimesSpecialDateModelFromJson(
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialDateModel {
   String? get date => throw _privateConstructorUsedError;
-  set date(String? value) => throw _privateConstructorUsedError;
   double? get timestamp => throw _privateConstructorUsedError;
-  set timestamp(double? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialDateModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8396,14 +8817,28 @@ class _$GetSeasonalAnimesSpecialDateModelImpl
       _$$GetSeasonalAnimesSpecialDateModelImplFromJson(json);
 
   @override
-  String? date;
+  final String? date;
   @override
-  double? timestamp;
+  final double? timestamp;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialDateModel(date: $date, timestamp: $timestamp)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialDateModelImpl &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.timestamp, timestamp) ||
+                other.timestamp == timestamp));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, date, timestamp);
 
   /// Create a copy of GetSeasonalAnimesSpecialDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8426,8 +8861,8 @@ class _$GetSeasonalAnimesSpecialDateModelImpl
 abstract class _GetSeasonalAnimesSpecialDateModel
     implements GetSeasonalAnimesSpecialDateModel {
   factory _GetSeasonalAnimesSpecialDateModel(
-      {String? date,
-      double? timestamp}) = _$GetSeasonalAnimesSpecialDateModelImpl;
+      {final String? date,
+      final double? timestamp}) = _$GetSeasonalAnimesSpecialDateModelImpl;
 
   factory _GetSeasonalAnimesSpecialDateModel.fromJson(
           Map<String, dynamic> json) =
@@ -8435,10 +8870,8 @@ abstract class _GetSeasonalAnimesSpecialDateModel
 
   @override
   String? get date;
-  set date(String? value);
   @override
   double? get timestamp;
-  set timestamp(double? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialDateModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8459,17 +8892,10 @@ GetSeasonalAnimesSpecialPropertiesModel
 mixin _$GetSeasonalAnimesSpecialPropertiesModel {
   GetSeasonalAnimesSpecialPropertiesStudioModel? get studio =>
       throw _privateConstructorUsedError;
-  set studio(GetSeasonalAnimesSpecialPropertiesStudioModel? value) =>
-      throw _privateConstructorUsedError;
   String? get source => throw _privateConstructorUsedError;
-  set source(String? value) => throw _privateConstructorUsedError;
   GetSeasonalAnimesSpecialPropertiesThemesModel? get themes =>
       throw _privateConstructorUsedError;
-  set themes(GetSeasonalAnimesSpecialPropertiesThemesModel? value) =>
-      throw _privateConstructorUsedError;
   GetSeasonalAnimesSpecialPropertiesDemographicModel? get demographic =>
-      throw _privateConstructorUsedError;
-  set demographic(GetSeasonalAnimesSpecialPropertiesDemographicModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialPropertiesModel to a JSON map.
@@ -8669,18 +9095,35 @@ class _$GetSeasonalAnimesSpecialPropertiesModelImpl
       _$$GetSeasonalAnimesSpecialPropertiesModelImplFromJson(json);
 
   @override
-  GetSeasonalAnimesSpecialPropertiesStudioModel? studio;
+  final GetSeasonalAnimesSpecialPropertiesStudioModel? studio;
   @override
-  String? source;
+  final String? source;
   @override
-  GetSeasonalAnimesSpecialPropertiesThemesModel? themes;
+  final GetSeasonalAnimesSpecialPropertiesThemesModel? themes;
   @override
-  GetSeasonalAnimesSpecialPropertiesDemographicModel? demographic;
+  final GetSeasonalAnimesSpecialPropertiesDemographicModel? demographic;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialPropertiesModel(studio: $studio, source: $source, themes: $themes, demographic: $demographic)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialPropertiesModelImpl &&
+            (identical(other.studio, studio) || other.studio == studio) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.themes, themes) || other.themes == themes) &&
+            (identical(other.demographic, demographic) ||
+                other.demographic == demographic));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, studio, source, themes, demographic);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8704,11 +9147,11 @@ class _$GetSeasonalAnimesSpecialPropertiesModelImpl
 abstract class _GetSeasonalAnimesSpecialPropertiesModel
     implements GetSeasonalAnimesSpecialPropertiesModel {
   factory _GetSeasonalAnimesSpecialPropertiesModel(
-          {GetSeasonalAnimesSpecialPropertiesStudioModel? studio,
-          String? source,
-          GetSeasonalAnimesSpecialPropertiesThemesModel? themes,
-          GetSeasonalAnimesSpecialPropertiesDemographicModel? demographic}) =
-      _$GetSeasonalAnimesSpecialPropertiesModelImpl;
+      {final GetSeasonalAnimesSpecialPropertiesStudioModel? studio,
+      final String? source,
+      final GetSeasonalAnimesSpecialPropertiesThemesModel? themes,
+      final GetSeasonalAnimesSpecialPropertiesDemographicModel?
+          demographic}) = _$GetSeasonalAnimesSpecialPropertiesModelImpl;
 
   factory _GetSeasonalAnimesSpecialPropertiesModel.fromJson(
           Map<String, dynamic> json) =
@@ -8716,16 +9159,12 @@ abstract class _GetSeasonalAnimesSpecialPropertiesModel
 
   @override
   GetSeasonalAnimesSpecialPropertiesStudioModel? get studio;
-  set studio(GetSeasonalAnimesSpecialPropertiesStudioModel? value);
   @override
   String? get source;
-  set source(String? value);
   @override
   GetSeasonalAnimesSpecialPropertiesThemesModel? get themes;
-  set themes(GetSeasonalAnimesSpecialPropertiesThemesModel? value);
   @override
   GetSeasonalAnimesSpecialPropertiesDemographicModel? get demographic;
-  set demographic(GetSeasonalAnimesSpecialPropertiesDemographicModel? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8745,9 +9184,7 @@ GetSeasonalAnimesSpecialPropertiesStudioModel
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialPropertiesStudioModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialPropertiesStudioModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8861,14 +9298,27 @@ class _$GetSeasonalAnimesSpecialPropertiesStudioModelImpl
       _$$GetSeasonalAnimesSpecialPropertiesStudioModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialPropertiesStudioModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialPropertiesStudioModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8893,8 +9343,8 @@ class _$GetSeasonalAnimesSpecialPropertiesStudioModelImpl
 abstract class _GetSeasonalAnimesSpecialPropertiesStudioModel
     implements GetSeasonalAnimesSpecialPropertiesStudioModel {
   factory _GetSeasonalAnimesSpecialPropertiesStudioModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesSpecialPropertiesStudioModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesSpecialPropertiesStudioModelImpl;
 
   factory _GetSeasonalAnimesSpecialPropertiesStudioModel.fromJson(
           Map<String, dynamic> json) =
@@ -8902,10 +9352,8 @@ abstract class _GetSeasonalAnimesSpecialPropertiesStudioModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesStudioModel
   /// with the given fields replaced by the non-null parameter values.
@@ -8925,9 +9373,7 @@ GetSeasonalAnimesSpecialPropertiesThemesModel
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialPropertiesThemesModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialPropertiesThemesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9041,14 +9487,27 @@ class _$GetSeasonalAnimesSpecialPropertiesThemesModelImpl
       _$$GetSeasonalAnimesSpecialPropertiesThemesModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialPropertiesThemesModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialPropertiesThemesModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -9073,8 +9532,8 @@ class _$GetSeasonalAnimesSpecialPropertiesThemesModelImpl
 abstract class _GetSeasonalAnimesSpecialPropertiesThemesModel
     implements GetSeasonalAnimesSpecialPropertiesThemesModel {
   factory _GetSeasonalAnimesSpecialPropertiesThemesModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesSpecialPropertiesThemesModelImpl;
+      {final String? name,
+      final String? url}) = _$GetSeasonalAnimesSpecialPropertiesThemesModelImpl;
 
   factory _GetSeasonalAnimesSpecialPropertiesThemesModel.fromJson(
           Map<String, dynamic> json) =
@@ -9082,10 +9541,8 @@ abstract class _GetSeasonalAnimesSpecialPropertiesThemesModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesThemesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -9105,9 +9562,7 @@ GetSeasonalAnimesSpecialPropertiesDemographicModel
 /// @nodoc
 mixin _$GetSeasonalAnimesSpecialPropertiesDemographicModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetSeasonalAnimesSpecialPropertiesDemographicModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -9231,14 +9686,27 @@ class _$GetSeasonalAnimesSpecialPropertiesDemographicModelImpl
       _$$GetSeasonalAnimesSpecialPropertiesDemographicModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetSeasonalAnimesSpecialPropertiesDemographicModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSeasonalAnimesSpecialPropertiesDemographicModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -9263,8 +9731,8 @@ class _$GetSeasonalAnimesSpecialPropertiesDemographicModelImpl
 abstract class _GetSeasonalAnimesSpecialPropertiesDemographicModel
     implements GetSeasonalAnimesSpecialPropertiesDemographicModel {
   factory _GetSeasonalAnimesSpecialPropertiesDemographicModel(
-      {String? name,
-      String? url}) = _$GetSeasonalAnimesSpecialPropertiesDemographicModelImpl;
+          {final String? name, final String? url}) =
+      _$GetSeasonalAnimesSpecialPropertiesDemographicModelImpl;
 
   factory _GetSeasonalAnimesSpecialPropertiesDemographicModel.fromJson(
           Map<String, dynamic> json) =
@@ -9272,10 +9740,8 @@ abstract class _GetSeasonalAnimesSpecialPropertiesDemographicModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetSeasonalAnimesSpecialPropertiesDemographicModel
   /// with the given fields replaced by the non-null parameter values.

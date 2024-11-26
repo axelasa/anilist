@@ -1,10 +1,18 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_anime_recomendations_model.freezed.dart';
 
 part 'get_anime_recomendations_model.g.dart';
 
-@unfreezed
+GetAnimeRecomendationsModel getAnimeRecomendationsModelFromJson(String str) => GetAnimeRecomendationsModel.fromJson(json.decode(str));
+
+String getAnimeRecomendationsModelToJson(GetAnimeRecomendationsModel data) => json.encode(data.toJson());
+
+
+
+@freezed
 class GetAnimeRecomendationsModel with _$GetAnimeRecomendationsModel {
   factory GetAnimeRecomendationsModel({
     List<GetAnimeRecomendationsRecommendationsModel?>? recommendations,
@@ -15,7 +23,7 @@ class GetAnimeRecomendationsModel with _$GetAnimeRecomendationsModel {
       _$GetAnimeRecomendationsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsRecommendationsModel
     with _$GetAnimeRecomendationsRecommendationsModel {
   factory GetAnimeRecomendationsRecommendationsModel({
@@ -31,7 +39,7 @@ class GetAnimeRecomendationsRecommendationsModel
       _$GetAnimeRecomendationsRecommendationsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsRecommendationsLikedModel
     with _$GetAnimeRecomendationsRecommendationsLikedModel {
   factory GetAnimeRecomendationsRecommendationsLikedModel({
@@ -46,7 +54,7 @@ class GetAnimeRecomendationsRecommendationsLikedModel
       _$GetAnimeRecomendationsRecommendationsLikedModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsRecommendationsRecommendationModel
     with _$GetAnimeRecomendationsRecommendationsRecommendationModel {
   factory GetAnimeRecomendationsRecommendationsRecommendationModel({
@@ -61,7 +69,7 @@ class GetAnimeRecomendationsRecommendationsRecommendationModel
       _$GetAnimeRecomendationsRecommendationsRecommendationModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsRecommendationsAuthorModel
     with _$GetAnimeRecomendationsRecommendationsAuthorModel {
   factory GetAnimeRecomendationsRecommendationsAuthorModel({

@@ -15,5 +15,5 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-this a hybrid app that gives users/anime fans to stay upto date with the anime world and also know what to watch next
+this a hybrid app that gives users/anime fans to stay up to date with the anime world and also know what to watch next
 
