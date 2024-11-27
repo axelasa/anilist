@@ -1,7 +1,10 @@
 import 'package:anilist/repository/api.dart';
 import 'package:anilist/screens/anime_reviews/anime_reviews.dart';
 import 'package:anilist/screens/anime_reviews/bloc/get_anime_reviews_cubit.dart';
+import 'package:anilist/screens/getanime/bloc/get_anime_cubit.dart';
+import 'package:anilist/screens/getanime/get_anime.dart';
 import 'package:anilist/screens/topanime/bloc/get_top_anime_cubit.dart';
+import 'package:anilist/screens/topanime/top_anime.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 void main() {
@@ -19,6 +22,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context)=>GetAnimeReviewsCubit(ApiService())),
         BlocProvider(create: (context)=>GetTopAnimeCubit(ApiService())),
+        BlocProvider(create: (context)=>GetAnimeCubit(ApiService())),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const AnimeReviews(),
+        home: const GetAnime(),
       ),
     );
   }
