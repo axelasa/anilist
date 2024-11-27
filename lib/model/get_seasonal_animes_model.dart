@@ -1,10 +1,17 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_seasonal_animes_model.freezed.dart';
 
 part 'get_seasonal_animes_model.g.dart';
 
-@unfreezed
+GetSeasonalAnimesModel getSeasonalAnimesModelFromJson(String str) => GetSeasonalAnimesModel.fromJson(json.decode(str));
+
+String getSeasonalAnimesModelToJson(GetSeasonalAnimesModel data) => json.encode(data.toJson());
+
+
+@freezed
 class GetSeasonalAnimesModel with _$GetSeasonalAnimesModel {
   factory GetSeasonalAnimesModel({
     @JsonKey(name: 'TV (New)') List<GetSeasonalAnimesTVNewModel?>? TVNew,
@@ -20,7 +27,7 @@ class GetSeasonalAnimesModel with _$GetSeasonalAnimesModel {
       _$GetSeasonalAnimesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewModel with _$GetSeasonalAnimesTVNewModel {
   factory GetSeasonalAnimesTVNewModel({
     String? title,
@@ -41,7 +48,7 @@ class GetSeasonalAnimesTVNewModel with _$GetSeasonalAnimesTVNewModel {
       _$GetSeasonalAnimesTVNewModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewGenresModel
     with _$GetSeasonalAnimesTVNewGenresModel {
   factory GetSeasonalAnimesTVNewGenresModel({
@@ -54,7 +61,7 @@ class GetSeasonalAnimesTVNewGenresModel
       _$GetSeasonalAnimesTVNewGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewDateModel with _$GetSeasonalAnimesTVNewDateModel {
   factory GetSeasonalAnimesTVNewDateModel({
     String? date,
@@ -65,7 +72,7 @@ class GetSeasonalAnimesTVNewDateModel with _$GetSeasonalAnimesTVNewDateModel {
       _$GetSeasonalAnimesTVNewDateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewPropertiesModel
     with _$GetSeasonalAnimesTVNewPropertiesModel {
   factory GetSeasonalAnimesTVNewPropertiesModel({
@@ -80,7 +87,7 @@ class GetSeasonalAnimesTVNewPropertiesModel
       _$GetSeasonalAnimesTVNewPropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewPropertiesStudioModel
     with _$GetSeasonalAnimesTVNewPropertiesStudioModel {
   factory GetSeasonalAnimesTVNewPropertiesStudioModel({
@@ -93,7 +100,7 @@ class GetSeasonalAnimesTVNewPropertiesStudioModel
       _$GetSeasonalAnimesTVNewPropertiesStudioModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewPropertiesThemesModel
     with _$GetSeasonalAnimesTVNewPropertiesThemesModel {
   factory GetSeasonalAnimesTVNewPropertiesThemesModel({
@@ -106,7 +113,7 @@ class GetSeasonalAnimesTVNewPropertiesThemesModel
       _$GetSeasonalAnimesTVNewPropertiesThemesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVNewPropertiesDemographicModel
     with _$GetSeasonalAnimesTVNewPropertiesDemographicModel {
   factory GetSeasonalAnimesTVNewPropertiesDemographicModel({
@@ -119,7 +126,7 @@ class GetSeasonalAnimesTVNewPropertiesDemographicModel
       _$GetSeasonalAnimesTVNewPropertiesDemographicModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingModel
     with _$GetSeasonalAnimesTVContinuingModel {
   factory GetSeasonalAnimesTVContinuingModel({
@@ -142,7 +149,7 @@ class GetSeasonalAnimesTVContinuingModel
       _$GetSeasonalAnimesTVContinuingModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingGenresModel
     with _$GetSeasonalAnimesTVContinuingGenresModel {
   factory GetSeasonalAnimesTVContinuingGenresModel({
@@ -155,7 +162,7 @@ class GetSeasonalAnimesTVContinuingGenresModel
       _$GetSeasonalAnimesTVContinuingGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingDateModel
     with _$GetSeasonalAnimesTVContinuingDateModel {
   factory GetSeasonalAnimesTVContinuingDateModel({
@@ -168,7 +175,7 @@ class GetSeasonalAnimesTVContinuingDateModel
       _$GetSeasonalAnimesTVContinuingDateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingPropertiesModel
     with _$GetSeasonalAnimesTVContinuingPropertiesModel {
   factory GetSeasonalAnimesTVContinuingPropertiesModel({
@@ -182,7 +189,7 @@ class GetSeasonalAnimesTVContinuingPropertiesModel
       _$GetSeasonalAnimesTVContinuingPropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingPropertiesStudioModel
     with _$GetSeasonalAnimesTVContinuingPropertiesStudioModel {
   factory GetSeasonalAnimesTVContinuingPropertiesStudioModel({
@@ -195,7 +202,7 @@ class GetSeasonalAnimesTVContinuingPropertiesStudioModel
       _$GetSeasonalAnimesTVContinuingPropertiesStudioModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesTVContinuingPropertiesDemographicModel
     with _$GetSeasonalAnimesTVContinuingPropertiesDemographicModel {
   factory GetSeasonalAnimesTVContinuingPropertiesDemographicModel({
@@ -208,7 +215,7 @@ class GetSeasonalAnimesTVContinuingPropertiesDemographicModel
       _$GetSeasonalAnimesTVContinuingPropertiesDemographicModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAModel with _$GetSeasonalAnimesONAModel {
   factory GetSeasonalAnimesONAModel({
     String? title,
@@ -229,7 +236,7 @@ class GetSeasonalAnimesONAModel with _$GetSeasonalAnimesONAModel {
       _$GetSeasonalAnimesONAModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAGenresModel with _$GetSeasonalAnimesONAGenresModel {
   factory GetSeasonalAnimesONAGenresModel({
     String? name,
@@ -240,7 +247,7 @@ class GetSeasonalAnimesONAGenresModel with _$GetSeasonalAnimesONAGenresModel {
       _$GetSeasonalAnimesONAGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONADateModel with _$GetSeasonalAnimesONADateModel {
   factory GetSeasonalAnimesONADateModel({
     String? date,
@@ -251,7 +258,7 @@ class GetSeasonalAnimesONADateModel with _$GetSeasonalAnimesONADateModel {
       _$GetSeasonalAnimesONADateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAPropertiesModel
     with _$GetSeasonalAnimesONAPropertiesModel {
   factory GetSeasonalAnimesONAPropertiesModel({
@@ -266,7 +273,7 @@ class GetSeasonalAnimesONAPropertiesModel
       _$GetSeasonalAnimesONAPropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAPropertiesStudiosModel
     with _$GetSeasonalAnimesONAPropertiesStudiosModel {
   factory GetSeasonalAnimesONAPropertiesStudiosModel({
@@ -279,7 +286,7 @@ class GetSeasonalAnimesONAPropertiesStudiosModel
       _$GetSeasonalAnimesONAPropertiesStudiosModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAPropertiesThemesModel
     with _$GetSeasonalAnimesONAPropertiesThemesModel {
   factory GetSeasonalAnimesONAPropertiesThemesModel({
@@ -292,7 +299,7 @@ class GetSeasonalAnimesONAPropertiesThemesModel
       _$GetSeasonalAnimesONAPropertiesThemesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesONAPropertiesDemographicModel
     with _$GetSeasonalAnimesONAPropertiesDemographicModel {
   factory GetSeasonalAnimesONAPropertiesDemographicModel({
@@ -305,7 +312,7 @@ class GetSeasonalAnimesONAPropertiesDemographicModel
       _$GetSeasonalAnimesONAPropertiesDemographicModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVAModel with _$GetSeasonalAnimesOVAModel {
   factory GetSeasonalAnimesOVAModel({
     String? title,
@@ -326,7 +333,7 @@ class GetSeasonalAnimesOVAModel with _$GetSeasonalAnimesOVAModel {
       _$GetSeasonalAnimesOVAModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVAGenresModel with _$GetSeasonalAnimesOVAGenresModel {
   factory GetSeasonalAnimesOVAGenresModel({
     String? name,
@@ -337,7 +344,7 @@ class GetSeasonalAnimesOVAGenresModel with _$GetSeasonalAnimesOVAGenresModel {
       _$GetSeasonalAnimesOVAGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVADateModel with _$GetSeasonalAnimesOVADateModel {
   factory GetSeasonalAnimesOVADateModel({
     String? date,
@@ -348,7 +355,7 @@ class GetSeasonalAnimesOVADateModel with _$GetSeasonalAnimesOVADateModel {
       _$GetSeasonalAnimesOVADateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVAPropertiesModel
     with _$GetSeasonalAnimesOVAPropertiesModel {
   factory GetSeasonalAnimesOVAPropertiesModel({
@@ -362,7 +369,7 @@ class GetSeasonalAnimesOVAPropertiesModel
       _$GetSeasonalAnimesOVAPropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVAPropertiesStudioModel
     with _$GetSeasonalAnimesOVAPropertiesStudioModel {
   factory GetSeasonalAnimesOVAPropertiesStudioModel({
@@ -375,7 +382,7 @@ class GetSeasonalAnimesOVAPropertiesStudioModel
       _$GetSeasonalAnimesOVAPropertiesStudioModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesOVAPropertiesThemesModel
     with _$GetSeasonalAnimesOVAPropertiesThemesModel {
   factory GetSeasonalAnimesOVAPropertiesThemesModel({
@@ -388,7 +395,7 @@ class GetSeasonalAnimesOVAPropertiesThemesModel
       _$GetSeasonalAnimesOVAPropertiesThemesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMovieModel with _$GetSeasonalAnimesMovieModel {
   factory GetSeasonalAnimesMovieModel({
     String? title,
@@ -409,7 +416,7 @@ class GetSeasonalAnimesMovieModel with _$GetSeasonalAnimesMovieModel {
       _$GetSeasonalAnimesMovieModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMovieGenresModel
     with _$GetSeasonalAnimesMovieGenresModel {
   factory GetSeasonalAnimesMovieGenresModel({
@@ -422,7 +429,7 @@ class GetSeasonalAnimesMovieGenresModel
       _$GetSeasonalAnimesMovieGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMovieDateModel with _$GetSeasonalAnimesMovieDateModel {
   factory GetSeasonalAnimesMovieDateModel({
     String? date,
@@ -433,7 +440,7 @@ class GetSeasonalAnimesMovieDateModel with _$GetSeasonalAnimesMovieDateModel {
       _$GetSeasonalAnimesMovieDateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMoviePropertiesModel
     with _$GetSeasonalAnimesMoviePropertiesModel {
   factory GetSeasonalAnimesMoviePropertiesModel({
@@ -447,7 +454,7 @@ class GetSeasonalAnimesMoviePropertiesModel
       _$GetSeasonalAnimesMoviePropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMoviePropertiesStudioModel
     with _$GetSeasonalAnimesMoviePropertiesStudioModel {
   factory GetSeasonalAnimesMoviePropertiesStudioModel({
@@ -460,7 +467,7 @@ class GetSeasonalAnimesMoviePropertiesStudioModel
       _$GetSeasonalAnimesMoviePropertiesStudioModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesMoviePropertiesThemesModel
     with _$GetSeasonalAnimesMoviePropertiesThemesModel {
   factory GetSeasonalAnimesMoviePropertiesThemesModel({
@@ -473,7 +480,7 @@ class GetSeasonalAnimesMoviePropertiesThemesModel
       _$GetSeasonalAnimesMoviePropertiesThemesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialModel with _$GetSeasonalAnimesSpecialModel {
   factory GetSeasonalAnimesSpecialModel({
     String? title,
@@ -494,7 +501,7 @@ class GetSeasonalAnimesSpecialModel with _$GetSeasonalAnimesSpecialModel {
       _$GetSeasonalAnimesSpecialModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialGenresModel
     with _$GetSeasonalAnimesSpecialGenresModel {
   factory GetSeasonalAnimesSpecialGenresModel({
@@ -507,7 +514,7 @@ class GetSeasonalAnimesSpecialGenresModel
       _$GetSeasonalAnimesSpecialGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialDateModel
     with _$GetSeasonalAnimesSpecialDateModel {
   factory GetSeasonalAnimesSpecialDateModel({
@@ -520,7 +527,7 @@ class GetSeasonalAnimesSpecialDateModel
       _$GetSeasonalAnimesSpecialDateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialPropertiesModel
     with _$GetSeasonalAnimesSpecialPropertiesModel {
   factory GetSeasonalAnimesSpecialPropertiesModel({
@@ -535,7 +542,7 @@ class GetSeasonalAnimesSpecialPropertiesModel
       _$GetSeasonalAnimesSpecialPropertiesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialPropertiesStudioModel
     with _$GetSeasonalAnimesSpecialPropertiesStudioModel {
   factory GetSeasonalAnimesSpecialPropertiesStudioModel({
@@ -548,7 +555,7 @@ class GetSeasonalAnimesSpecialPropertiesStudioModel
       _$GetSeasonalAnimesSpecialPropertiesStudioModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialPropertiesThemesModel
     with _$GetSeasonalAnimesSpecialPropertiesThemesModel {
   factory GetSeasonalAnimesSpecialPropertiesThemesModel({
@@ -561,7 +568,7 @@ class GetSeasonalAnimesSpecialPropertiesThemesModel
       _$GetSeasonalAnimesSpecialPropertiesThemesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetSeasonalAnimesSpecialPropertiesDemographicModel
     with _$GetSeasonalAnimesSpecialPropertiesDemographicModel {
   factory GetSeasonalAnimesSpecialPropertiesDemographicModel({

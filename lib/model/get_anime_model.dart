@@ -1,10 +1,16 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_anime_model.freezed.dart';
 
 part 'get_anime_model.g.dart';
 
-@unfreezed
+GetAnimeModel getAnimeModelFromJson(String str) => GetAnimeModel.fromJson(json.decode(str));
+
+String getAnimeModelToJson(GetAnimeModel data) => json.encode(data.toJson());
+
+@freezed
 class GetAnimeModel with _$GetAnimeModel {
   factory GetAnimeModel({
     @JsonKey(name: 'title_ov') String? titleOv,
@@ -22,7 +28,7 @@ class GetAnimeModel with _$GetAnimeModel {
       _$GetAnimeModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeAlternativeTitlesModel with _$GetAnimeAlternativeTitlesModel {
   factory GetAnimeAlternativeTitlesModel({
     String? synonyms,
@@ -34,7 +40,7 @@ class GetAnimeAlternativeTitlesModel with _$GetAnimeAlternativeTitlesModel {
       _$GetAnimeAlternativeTitlesModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationModel with _$GetAnimeInformationModel {
   factory GetAnimeInformationModel({
     List<GetAnimeInformationTypeModel?>? type,
@@ -59,7 +65,7 @@ class GetAnimeInformationModel with _$GetAnimeInformationModel {
       _$GetAnimeInformationModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationTypeModel with _$GetAnimeInformationTypeModel {
   factory GetAnimeInformationTypeModel({
     String? name,
@@ -70,7 +76,7 @@ class GetAnimeInformationTypeModel with _$GetAnimeInformationTypeModel {
       _$GetAnimeInformationTypeModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationPremieredModel
     with _$GetAnimeInformationPremieredModel {
   factory GetAnimeInformationPremieredModel({
@@ -83,7 +89,7 @@ class GetAnimeInformationPremieredModel
       _$GetAnimeInformationPremieredModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationProducersModel
     with _$GetAnimeInformationProducersModel {
   factory GetAnimeInformationProducersModel({
@@ -96,7 +102,7 @@ class GetAnimeInformationProducersModel
       _$GetAnimeInformationProducersModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationLicensorsModel
     with _$GetAnimeInformationLicensorsModel {
   factory GetAnimeInformationLicensorsModel({
@@ -109,7 +115,7 @@ class GetAnimeInformationLicensorsModel
       _$GetAnimeInformationLicensorsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationStudiosModel with _$GetAnimeInformationStudiosModel {
   factory GetAnimeInformationStudiosModel({
     String? name,
@@ -120,7 +126,7 @@ class GetAnimeInformationStudiosModel with _$GetAnimeInformationStudiosModel {
       _$GetAnimeInformationStudiosModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationSourceModel with _$GetAnimeInformationSourceModel {
   factory GetAnimeInformationSourceModel({
     String? name,
@@ -131,7 +137,7 @@ class GetAnimeInformationSourceModel with _$GetAnimeInformationSourceModel {
       _$GetAnimeInformationSourceModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationGenresModel with _$GetAnimeInformationGenresModel {
   factory GetAnimeInformationGenresModel({
     String? name,
@@ -142,7 +148,7 @@ class GetAnimeInformationGenresModel with _$GetAnimeInformationGenresModel {
       _$GetAnimeInformationGenresModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeInformationDemographicModel
     with _$GetAnimeInformationDemographicModel {
   factory GetAnimeInformationDemographicModel({
@@ -155,7 +161,7 @@ class GetAnimeInformationDemographicModel
       _$GetAnimeInformationDemographicModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeStatisticsModel with _$GetAnimeStatisticsModel {
   factory GetAnimeStatisticsModel({
     double? score,

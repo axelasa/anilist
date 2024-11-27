@@ -1,10 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 
 part 'anime_reviews_model.freezed.dart';
 
 part 'anime_reviews_model.g.dart';
 
-@unfreezed
+AnimeReviewsModel animeReviewsModelFromJson(String str)=> AnimeReviewsModel.fromJson(json.decode(str));
+
+String animeReviewsModelToJson(AnimeReviewsModel data) => json.encode(data.toJson());
+
+@freezed
 class AnimeReviewsModel with _$AnimeReviewsModel {
   factory AnimeReviewsModel({
     List<AnimeReviewsReviewsModel?>? reviews,
@@ -15,7 +20,7 @@ class AnimeReviewsModel with _$AnimeReviewsModel {
       _$AnimeReviewsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class AnimeReviewsReviewsModel with _$AnimeReviewsReviewsModel {
   factory AnimeReviewsReviewsModel({
     AnimeReviewsReviewsObjectModel? object,
@@ -30,7 +35,7 @@ class AnimeReviewsReviewsModel with _$AnimeReviewsReviewsModel {
       _$AnimeReviewsReviewsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class AnimeReviewsReviewsObjectModel with _$AnimeReviewsReviewsObjectModel {
   factory AnimeReviewsReviewsObjectModel({
     String? title,
@@ -44,7 +49,7 @@ class AnimeReviewsReviewsObjectModel with _$AnimeReviewsReviewsObjectModel {
       _$AnimeReviewsReviewsObjectModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class AnimeReviewsReviewsUserModel with _$AnimeReviewsReviewsUserModel {
   factory AnimeReviewsReviewsUserModel({
     String? name,
@@ -56,7 +61,7 @@ class AnimeReviewsReviewsUserModel with _$AnimeReviewsReviewsUserModel {
       _$AnimeReviewsReviewsUserModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class AnimeReviewsReviewsTextModel with _$AnimeReviewsReviewsTextModel {
   factory AnimeReviewsReviewsTextModel({
     String? visible,
@@ -68,7 +73,7 @@ class AnimeReviewsReviewsTextModel with _$AnimeReviewsReviewsTextModel {
       _$AnimeReviewsReviewsTextModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class AnimeReviewsReviewsDateModel with _$AnimeReviewsReviewsDateModel {
   factory AnimeReviewsReviewsDateModel({
     @JsonKey(name: 'date_str') String? dateStr,

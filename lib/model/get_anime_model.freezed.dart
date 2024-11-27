@@ -22,33 +22,18 @@ GetAnimeModel _$GetAnimeModelFromJson(Map<String, dynamic> json) {
 mixin _$GetAnimeModel {
   @JsonKey(name: 'title_ov')
   String? get titleOv => throw _privateConstructorUsedError;
-  @JsonKey(name: 'title_ov')
-  set titleOv(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'title_en')
   String? get titleEn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'title_en')
-  set titleEn(String? value) => throw _privateConstructorUsedError;
   String? get synopsis => throw _privateConstructorUsedError;
-  set synopsis(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'alternative_titles')
   GetAnimeAlternativeTitlesModel? get alternativeTitles =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'alternative_titles')
-  set alternativeTitles(GetAnimeAlternativeTitlesModel? value) =>
-      throw _privateConstructorUsedError;
   GetAnimeInformationModel? get information =>
       throw _privateConstructorUsedError;
-  set information(GetAnimeInformationModel? value) =>
-      throw _privateConstructorUsedError;
   GetAnimeStatisticsModel? get statistics => throw _privateConstructorUsedError;
-  set statistics(GetAnimeStatisticsModel? value) =>
-      throw _privateConstructorUsedError;
   List<dynamic>? get characters => throw _privateConstructorUsedError;
-  set characters(List<dynamic>? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'picture_url')
   String? get pictureUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -262,7 +247,7 @@ class __$$GetAnimeModelImplCopyWithImpl<$Res>
           : statistics // ignore: cast_nullable_to_non_nullable
               as GetAnimeStatisticsModel?,
       characters: freezed == characters
-          ? _value.characters
+          ? _value._characters
           : characters // ignore: cast_nullable_to_non_nullable
               as List<dynamic>?,
       pictureUrl: freezed == pictureUrl
@@ -283,37 +268,80 @@ class _$GetAnimeModelImpl implements _GetAnimeModel {
       @JsonKey(name: 'alternative_titles') this.alternativeTitles,
       this.information,
       this.statistics,
-      this.characters,
-      @JsonKey(name: 'picture_url') this.pictureUrl});
+      final List<dynamic>? characters,
+      @JsonKey(name: 'picture_url') this.pictureUrl})
+      : _characters = characters;
 
   factory _$GetAnimeModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetAnimeModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'title_ov')
-  String? titleOv;
+  final String? titleOv;
   @override
   @JsonKey(name: 'title_en')
-  String? titleEn;
+  final String? titleEn;
   @override
-  String? synopsis;
+  final String? synopsis;
   @override
   @JsonKey(name: 'alternative_titles')
-  GetAnimeAlternativeTitlesModel? alternativeTitles;
+  final GetAnimeAlternativeTitlesModel? alternativeTitles;
   @override
-  GetAnimeInformationModel? information;
+  final GetAnimeInformationModel? information;
   @override
-  GetAnimeStatisticsModel? statistics;
+  final GetAnimeStatisticsModel? statistics;
+  final List<dynamic>? _characters;
   @override
-  List<dynamic>? characters;
+  List<dynamic>? get characters {
+    final value = _characters;
+    if (value == null) return null;
+    if (_characters is EqualUnmodifiableListView) return _characters;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'picture_url')
-  String? pictureUrl;
+  final String? pictureUrl;
 
   @override
   String toString() {
     return 'GetAnimeModel(titleOv: $titleOv, titleEn: $titleEn, synopsis: $synopsis, alternativeTitles: $alternativeTitles, information: $information, statistics: $statistics, characters: $characters, pictureUrl: $pictureUrl)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeModelImpl &&
+            (identical(other.titleOv, titleOv) || other.titleOv == titleOv) &&
+            (identical(other.titleEn, titleEn) || other.titleEn == titleEn) &&
+            (identical(other.synopsis, synopsis) ||
+                other.synopsis == synopsis) &&
+            (identical(other.alternativeTitles, alternativeTitles) ||
+                other.alternativeTitles == alternativeTitles) &&
+            (identical(other.information, information) ||
+                other.information == information) &&
+            (identical(other.statistics, statistics) ||
+                other.statistics == statistics) &&
+            const DeepCollectionEquality()
+                .equals(other._characters, _characters) &&
+            (identical(other.pictureUrl, pictureUrl) ||
+                other.pictureUrl == pictureUrl));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      titleOv,
+      titleEn,
+      synopsis,
+      alternativeTitles,
+      information,
+      statistics,
+      const DeepCollectionEquality().hash(_characters),
+      pictureUrl);
 
   /// Create a copy of GetAnimeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -333,15 +361,16 @@ class _$GetAnimeModelImpl implements _GetAnimeModel {
 
 abstract class _GetAnimeModel implements GetAnimeModel {
   factory _GetAnimeModel(
-      {@JsonKey(name: 'title_ov') String? titleOv,
-      @JsonKey(name: 'title_en') String? titleEn,
-      String? synopsis,
-      @JsonKey(name: 'alternative_titles')
-      GetAnimeAlternativeTitlesModel? alternativeTitles,
-      GetAnimeInformationModel? information,
-      GetAnimeStatisticsModel? statistics,
-      List<dynamic>? characters,
-      @JsonKey(name: 'picture_url') String? pictureUrl}) = _$GetAnimeModelImpl;
+          {@JsonKey(name: 'title_ov') final String? titleOv,
+          @JsonKey(name: 'title_en') final String? titleEn,
+          final String? synopsis,
+          @JsonKey(name: 'alternative_titles')
+          final GetAnimeAlternativeTitlesModel? alternativeTitles,
+          final GetAnimeInformationModel? information,
+          final GetAnimeStatisticsModel? statistics,
+          final List<dynamic>? characters,
+          @JsonKey(name: 'picture_url') final String? pictureUrl}) =
+      _$GetAnimeModelImpl;
 
   factory _GetAnimeModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeModelImpl.fromJson;
@@ -349,35 +378,23 @@ abstract class _GetAnimeModel implements GetAnimeModel {
   @override
   @JsonKey(name: 'title_ov')
   String? get titleOv;
-  @JsonKey(name: 'title_ov')
-  set titleOv(String? value);
   @override
   @JsonKey(name: 'title_en')
   String? get titleEn;
-  @JsonKey(name: 'title_en')
-  set titleEn(String? value);
   @override
   String? get synopsis;
-  set synopsis(String? value);
   @override
   @JsonKey(name: 'alternative_titles')
   GetAnimeAlternativeTitlesModel? get alternativeTitles;
-  @JsonKey(name: 'alternative_titles')
-  set alternativeTitles(GetAnimeAlternativeTitlesModel? value);
   @override
   GetAnimeInformationModel? get information;
-  set information(GetAnimeInformationModel? value);
   @override
   GetAnimeStatisticsModel? get statistics;
-  set statistics(GetAnimeStatisticsModel? value);
   @override
   List<dynamic>? get characters;
-  set characters(List<dynamic>? value);
   @override
   @JsonKey(name: 'picture_url')
   String? get pictureUrl;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value);
 
   /// Create a copy of GetAnimeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -395,11 +412,8 @@ GetAnimeAlternativeTitlesModel _$GetAnimeAlternativeTitlesModelFromJson(
 /// @nodoc
 mixin _$GetAnimeAlternativeTitlesModel {
   String? get synonyms => throw _privateConstructorUsedError;
-  set synonyms(String? value) => throw _privateConstructorUsedError;
   String? get japanese => throw _privateConstructorUsedError;
-  set japanese(String? value) => throw _privateConstructorUsedError;
   String? get english => throw _privateConstructorUsedError;
-  set english(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeAlternativeTitlesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -519,16 +533,32 @@ class _$GetAnimeAlternativeTitlesModelImpl
       _$$GetAnimeAlternativeTitlesModelImplFromJson(json);
 
   @override
-  String? synonyms;
+  final String? synonyms;
   @override
-  String? japanese;
+  final String? japanese;
   @override
-  String? english;
+  final String? english;
 
   @override
   String toString() {
     return 'GetAnimeAlternativeTitlesModel(synonyms: $synonyms, japanese: $japanese, english: $english)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeAlternativeTitlesModelImpl &&
+            (identical(other.synonyms, synonyms) ||
+                other.synonyms == synonyms) &&
+            (identical(other.japanese, japanese) ||
+                other.japanese == japanese) &&
+            (identical(other.english, english) || other.english == english));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, synonyms, japanese, english);
 
   /// Create a copy of GetAnimeAlternativeTitlesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -551,22 +581,19 @@ class _$GetAnimeAlternativeTitlesModelImpl
 abstract class _GetAnimeAlternativeTitlesModel
     implements GetAnimeAlternativeTitlesModel {
   factory _GetAnimeAlternativeTitlesModel(
-      {String? synonyms,
-      String? japanese,
-      String? english}) = _$GetAnimeAlternativeTitlesModelImpl;
+      {final String? synonyms,
+      final String? japanese,
+      final String? english}) = _$GetAnimeAlternativeTitlesModelImpl;
 
   factory _GetAnimeAlternativeTitlesModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeAlternativeTitlesModelImpl.fromJson;
 
   @override
   String? get synonyms;
-  set synonyms(String? value);
   @override
   String? get japanese;
-  set japanese(String? value);
   @override
   String? get english;
-  set english(String? value);
 
   /// Create a copy of GetAnimeAlternativeTitlesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -586,51 +613,27 @@ GetAnimeInformationModel _$GetAnimeInformationModelFromJson(
 mixin _$GetAnimeInformationModel {
   List<GetAnimeInformationTypeModel?>? get type =>
       throw _privateConstructorUsedError;
-  set type(List<GetAnimeInformationTypeModel?>? value) =>
-      throw _privateConstructorUsedError;
   String? get episodes => throw _privateConstructorUsedError;
-  set episodes(String? value) => throw _privateConstructorUsedError;
   String? get status => throw _privateConstructorUsedError;
-  set status(String? value) => throw _privateConstructorUsedError;
   String? get aired => throw _privateConstructorUsedError;
-  set aired(String? value) => throw _privateConstructorUsedError;
   List<GetAnimeInformationPremieredModel?>? get premiered =>
       throw _privateConstructorUsedError;
-  set premiered(List<GetAnimeInformationPremieredModel?>? value) =>
-      throw _privateConstructorUsedError;
   String? get broadcast => throw _privateConstructorUsedError;
-  set broadcast(String? value) => throw _privateConstructorUsedError;
   List<GetAnimeInformationProducersModel?>? get producers =>
-      throw _privateConstructorUsedError;
-  set producers(List<GetAnimeInformationProducersModel?>? value) =>
       throw _privateConstructorUsedError;
   List<GetAnimeInformationLicensorsModel?>? get licensors =>
       throw _privateConstructorUsedError;
-  set licensors(List<GetAnimeInformationLicensorsModel?>? value) =>
-      throw _privateConstructorUsedError;
   List<GetAnimeInformationStudiosModel?>? get studios =>
-      throw _privateConstructorUsedError;
-  set studios(List<GetAnimeInformationStudiosModel?>? value) =>
       throw _privateConstructorUsedError;
   List<GetAnimeInformationSourceModel?>? get source =>
       throw _privateConstructorUsedError;
-  set source(List<GetAnimeInformationSourceModel?>? value) =>
-      throw _privateConstructorUsedError;
   String? get genre => throw _privateConstructorUsedError;
-  set genre(String? value) => throw _privateConstructorUsedError;
   String? get theme => throw _privateConstructorUsedError;
-  set theme(String? value) => throw _privateConstructorUsedError;
   String? get duration => throw _privateConstructorUsedError;
-  set duration(String? value) => throw _privateConstructorUsedError;
   String? get rating => throw _privateConstructorUsedError;
-  set rating(String? value) => throw _privateConstructorUsedError;
   List<GetAnimeInformationGenresModel?>? get genres =>
       throw _privateConstructorUsedError;
-  set genres(List<GetAnimeInformationGenresModel?>? value) =>
-      throw _privateConstructorUsedError;
   List<GetAnimeInformationDemographicModel?>? get demographic =>
-      throw _privateConstructorUsedError;
-  set demographic(List<GetAnimeInformationDemographicModel?>? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationModel to a JSON map.
@@ -832,7 +835,7 @@ class __$$GetAnimeInformationModelImplCopyWithImpl<$Res>
   }) {
     return _then(_$GetAnimeInformationModelImpl(
       type: freezed == type
-          ? _value.type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationTypeModel?>?,
       episodes: freezed == episodes
@@ -848,7 +851,7 @@ class __$$GetAnimeInformationModelImplCopyWithImpl<$Res>
           : aired // ignore: cast_nullable_to_non_nullable
               as String?,
       premiered: freezed == premiered
-          ? _value.premiered
+          ? _value._premiered
           : premiered // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationPremieredModel?>?,
       broadcast: freezed == broadcast
@@ -856,19 +859,19 @@ class __$$GetAnimeInformationModelImplCopyWithImpl<$Res>
           : broadcast // ignore: cast_nullable_to_non_nullable
               as String?,
       producers: freezed == producers
-          ? _value.producers
+          ? _value._producers
           : producers // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationProducersModel?>?,
       licensors: freezed == licensors
-          ? _value.licensors
+          ? _value._licensors
           : licensors // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationLicensorsModel?>?,
       studios: freezed == studios
-          ? _value.studios
+          ? _value._studios
           : studios // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationStudiosModel?>?,
       source: freezed == source
-          ? _value.source
+          ? _value._source
           : source // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationSourceModel?>?,
       genre: freezed == genre
@@ -888,11 +891,11 @@ class __$$GetAnimeInformationModelImplCopyWithImpl<$Res>
           : rating // ignore: cast_nullable_to_non_nullable
               as String?,
       genres: freezed == genres
-          ? _value.genres
+          ? _value._genres
           : genres // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationGenresModel?>?,
       demographic: freezed == demographic
-          ? _value.demographic
+          ? _value._demographic
           : demographic // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeInformationDemographicModel?>?,
     ));
@@ -903,63 +906,185 @@ class __$$GetAnimeInformationModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$GetAnimeInformationModelImpl implements _GetAnimeInformationModel {
   _$GetAnimeInformationModelImpl(
-      {this.type,
+      {final List<GetAnimeInformationTypeModel?>? type,
       this.episodes,
       this.status,
       this.aired,
-      this.premiered,
+      final List<GetAnimeInformationPremieredModel?>? premiered,
       this.broadcast,
-      this.producers,
-      this.licensors,
-      this.studios,
-      this.source,
+      final List<GetAnimeInformationProducersModel?>? producers,
+      final List<GetAnimeInformationLicensorsModel?>? licensors,
+      final List<GetAnimeInformationStudiosModel?>? studios,
+      final List<GetAnimeInformationSourceModel?>? source,
       this.genre,
       this.theme,
       this.duration,
       this.rating,
-      this.genres,
-      this.demographic});
+      final List<GetAnimeInformationGenresModel?>? genres,
+      final List<GetAnimeInformationDemographicModel?>? demographic})
+      : _type = type,
+        _premiered = premiered,
+        _producers = producers,
+        _licensors = licensors,
+        _studios = studios,
+        _source = source,
+        _genres = genres,
+        _demographic = demographic;
 
   factory _$GetAnimeInformationModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$GetAnimeInformationModelImplFromJson(json);
 
+  final List<GetAnimeInformationTypeModel?>? _type;
   @override
-  List<GetAnimeInformationTypeModel?>? type;
+  List<GetAnimeInformationTypeModel?>? get type {
+    final value = _type;
+    if (value == null) return null;
+    if (_type is EqualUnmodifiableListView) return _type;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  String? episodes;
+  final String? episodes;
   @override
-  String? status;
+  final String? status;
   @override
-  String? aired;
+  final String? aired;
+  final List<GetAnimeInformationPremieredModel?>? _premiered;
   @override
-  List<GetAnimeInformationPremieredModel?>? premiered;
+  List<GetAnimeInformationPremieredModel?>? get premiered {
+    final value = _premiered;
+    if (value == null) return null;
+    if (_premiered is EqualUnmodifiableListView) return _premiered;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  String? broadcast;
+  final String? broadcast;
+  final List<GetAnimeInformationProducersModel?>? _producers;
   @override
-  List<GetAnimeInformationProducersModel?>? producers;
+  List<GetAnimeInformationProducersModel?>? get producers {
+    final value = _producers;
+    if (value == null) return null;
+    if (_producers is EqualUnmodifiableListView) return _producers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetAnimeInformationLicensorsModel?>? _licensors;
   @override
-  List<GetAnimeInformationLicensorsModel?>? licensors;
+  List<GetAnimeInformationLicensorsModel?>? get licensors {
+    final value = _licensors;
+    if (value == null) return null;
+    if (_licensors is EqualUnmodifiableListView) return _licensors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetAnimeInformationStudiosModel?>? _studios;
   @override
-  List<GetAnimeInformationStudiosModel?>? studios;
+  List<GetAnimeInformationStudiosModel?>? get studios {
+    final value = _studios;
+    if (value == null) return null;
+    if (_studios is EqualUnmodifiableListView) return _studios;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetAnimeInformationSourceModel?>? _source;
   @override
-  List<GetAnimeInformationSourceModel?>? source;
+  List<GetAnimeInformationSourceModel?>? get source {
+    final value = _source;
+    if (value == null) return null;
+    if (_source is EqualUnmodifiableListView) return _source;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  String? genre;
+  final String? genre;
   @override
-  String? theme;
+  final String? theme;
   @override
-  String? duration;
+  final String? duration;
   @override
-  String? rating;
+  final String? rating;
+  final List<GetAnimeInformationGenresModel?>? _genres;
   @override
-  List<GetAnimeInformationGenresModel?>? genres;
+  List<GetAnimeInformationGenresModel?>? get genres {
+    final value = _genres;
+    if (value == null) return null;
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<GetAnimeInformationDemographicModel?>? _demographic;
   @override
-  List<GetAnimeInformationDemographicModel?>? demographic;
+  List<GetAnimeInformationDemographicModel?>? get demographic {
+    final value = _demographic;
+    if (value == null) return null;
+    if (_demographic is EqualUnmodifiableListView) return _demographic;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
     return 'GetAnimeInformationModel(type: $type, episodes: $episodes, status: $status, aired: $aired, premiered: $premiered, broadcast: $broadcast, producers: $producers, licensors: $licensors, studios: $studios, source: $source, genre: $genre, theme: $theme, duration: $duration, rating: $rating, genres: $genres, demographic: $demographic)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationModelImpl &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
+            (identical(other.episodes, episodes) ||
+                other.episodes == episodes) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.aired, aired) || other.aired == aired) &&
+            const DeepCollectionEquality()
+                .equals(other._premiered, _premiered) &&
+            (identical(other.broadcast, broadcast) ||
+                other.broadcast == broadcast) &&
+            const DeepCollectionEquality()
+                .equals(other._producers, _producers) &&
+            const DeepCollectionEquality()
+                .equals(other._licensors, _licensors) &&
+            const DeepCollectionEquality().equals(other._studios, _studios) &&
+            const DeepCollectionEquality().equals(other._source, _source) &&
+            (identical(other.genre, genre) || other.genre == genre) &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.duration, duration) ||
+                other.duration == duration) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality()
+                .equals(other._demographic, _demographic));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_type),
+      episodes,
+      status,
+      aired,
+      const DeepCollectionEquality().hash(_premiered),
+      broadcast,
+      const DeepCollectionEquality().hash(_producers),
+      const DeepCollectionEquality().hash(_licensors),
+      const DeepCollectionEquality().hash(_studios),
+      const DeepCollectionEquality().hash(_source),
+      genre,
+      theme,
+      duration,
+      rating,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(_demographic));
 
   /// Create a copy of GetAnimeInformationModel
   /// with the given fields replaced by the non-null parameter values.
@@ -980,22 +1105,22 @@ class _$GetAnimeInformationModelImpl implements _GetAnimeInformationModel {
 
 abstract class _GetAnimeInformationModel implements GetAnimeInformationModel {
   factory _GetAnimeInformationModel(
-          {List<GetAnimeInformationTypeModel?>? type,
-          String? episodes,
-          String? status,
-          String? aired,
-          List<GetAnimeInformationPremieredModel?>? premiered,
-          String? broadcast,
-          List<GetAnimeInformationProducersModel?>? producers,
-          List<GetAnimeInformationLicensorsModel?>? licensors,
-          List<GetAnimeInformationStudiosModel?>? studios,
-          List<GetAnimeInformationSourceModel?>? source,
-          String? genre,
-          String? theme,
-          String? duration,
-          String? rating,
-          List<GetAnimeInformationGenresModel?>? genres,
-          List<GetAnimeInformationDemographicModel?>? demographic}) =
+          {final List<GetAnimeInformationTypeModel?>? type,
+          final String? episodes,
+          final String? status,
+          final String? aired,
+          final List<GetAnimeInformationPremieredModel?>? premiered,
+          final String? broadcast,
+          final List<GetAnimeInformationProducersModel?>? producers,
+          final List<GetAnimeInformationLicensorsModel?>? licensors,
+          final List<GetAnimeInformationStudiosModel?>? studios,
+          final List<GetAnimeInformationSourceModel?>? source,
+          final String? genre,
+          final String? theme,
+          final String? duration,
+          final String? rating,
+          final List<GetAnimeInformationGenresModel?>? genres,
+          final List<GetAnimeInformationDemographicModel?>? demographic}) =
       _$GetAnimeInformationModelImpl;
 
   factory _GetAnimeInformationModel.fromJson(Map<String, dynamic> json) =
@@ -1003,52 +1128,36 @@ abstract class _GetAnimeInformationModel implements GetAnimeInformationModel {
 
   @override
   List<GetAnimeInformationTypeModel?>? get type;
-  set type(List<GetAnimeInformationTypeModel?>? value);
   @override
   String? get episodes;
-  set episodes(String? value);
   @override
   String? get status;
-  set status(String? value);
   @override
   String? get aired;
-  set aired(String? value);
   @override
   List<GetAnimeInformationPremieredModel?>? get premiered;
-  set premiered(List<GetAnimeInformationPremieredModel?>? value);
   @override
   String? get broadcast;
-  set broadcast(String? value);
   @override
   List<GetAnimeInformationProducersModel?>? get producers;
-  set producers(List<GetAnimeInformationProducersModel?>? value);
   @override
   List<GetAnimeInformationLicensorsModel?>? get licensors;
-  set licensors(List<GetAnimeInformationLicensorsModel?>? value);
   @override
   List<GetAnimeInformationStudiosModel?>? get studios;
-  set studios(List<GetAnimeInformationStudiosModel?>? value);
   @override
   List<GetAnimeInformationSourceModel?>? get source;
-  set source(List<GetAnimeInformationSourceModel?>? value);
   @override
   String? get genre;
-  set genre(String? value);
   @override
   String? get theme;
-  set theme(String? value);
   @override
   String? get duration;
-  set duration(String? value);
   @override
   String? get rating;
-  set rating(String? value);
   @override
   List<GetAnimeInformationGenresModel?>? get genres;
-  set genres(List<GetAnimeInformationGenresModel?>? value);
   @override
   List<GetAnimeInformationDemographicModel?>? get demographic;
-  set demographic(List<GetAnimeInformationDemographicModel?>? value);
 
   /// Create a copy of GetAnimeInformationModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1066,9 +1175,7 @@ GetAnimeInformationTypeModel _$GetAnimeInformationTypeModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationTypeModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationTypeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1177,14 +1284,27 @@ class _$GetAnimeInformationTypeModelImpl
       _$$GetAnimeInformationTypeModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationTypeModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationTypeModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationTypeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1206,18 +1326,17 @@ class _$GetAnimeInformationTypeModelImpl
 
 abstract class _GetAnimeInformationTypeModel
     implements GetAnimeInformationTypeModel {
-  factory _GetAnimeInformationTypeModel({String? name, String? url}) =
-      _$GetAnimeInformationTypeModelImpl;
+  factory _GetAnimeInformationTypeModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationTypeModelImpl;
 
   factory _GetAnimeInformationTypeModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeInformationTypeModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationTypeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1236,9 +1355,7 @@ GetAnimeInformationPremieredModel _$GetAnimeInformationPremieredModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationPremieredModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationPremieredModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1347,14 +1464,27 @@ class _$GetAnimeInformationPremieredModelImpl
       _$$GetAnimeInformationPremieredModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationPremieredModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationPremieredModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationPremieredModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1376,8 +1506,9 @@ class _$GetAnimeInformationPremieredModelImpl
 
 abstract class _GetAnimeInformationPremieredModel
     implements GetAnimeInformationPremieredModel {
-  factory _GetAnimeInformationPremieredModel({String? name, String? url}) =
-      _$GetAnimeInformationPremieredModelImpl;
+  factory _GetAnimeInformationPremieredModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationPremieredModelImpl;
 
   factory _GetAnimeInformationPremieredModel.fromJson(
           Map<String, dynamic> json) =
@@ -1385,10 +1516,8 @@ abstract class _GetAnimeInformationPremieredModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationPremieredModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1407,9 +1536,7 @@ GetAnimeInformationProducersModel _$GetAnimeInformationProducersModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationProducersModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationProducersModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1518,14 +1645,27 @@ class _$GetAnimeInformationProducersModelImpl
       _$$GetAnimeInformationProducersModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationProducersModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationProducersModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationProducersModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1547,8 +1687,9 @@ class _$GetAnimeInformationProducersModelImpl
 
 abstract class _GetAnimeInformationProducersModel
     implements GetAnimeInformationProducersModel {
-  factory _GetAnimeInformationProducersModel({String? name, String? url}) =
-      _$GetAnimeInformationProducersModelImpl;
+  factory _GetAnimeInformationProducersModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationProducersModelImpl;
 
   factory _GetAnimeInformationProducersModel.fromJson(
           Map<String, dynamic> json) =
@@ -1556,10 +1697,8 @@ abstract class _GetAnimeInformationProducersModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationProducersModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1578,9 +1717,7 @@ GetAnimeInformationLicensorsModel _$GetAnimeInformationLicensorsModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationLicensorsModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationLicensorsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1689,14 +1826,27 @@ class _$GetAnimeInformationLicensorsModelImpl
       _$$GetAnimeInformationLicensorsModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationLicensorsModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationLicensorsModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationLicensorsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1718,8 +1868,9 @@ class _$GetAnimeInformationLicensorsModelImpl
 
 abstract class _GetAnimeInformationLicensorsModel
     implements GetAnimeInformationLicensorsModel {
-  factory _GetAnimeInformationLicensorsModel({String? name, String? url}) =
-      _$GetAnimeInformationLicensorsModelImpl;
+  factory _GetAnimeInformationLicensorsModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationLicensorsModelImpl;
 
   factory _GetAnimeInformationLicensorsModel.fromJson(
           Map<String, dynamic> json) =
@@ -1727,10 +1878,8 @@ abstract class _GetAnimeInformationLicensorsModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationLicensorsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1749,9 +1898,7 @@ GetAnimeInformationStudiosModel _$GetAnimeInformationStudiosModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationStudiosModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationStudiosModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1860,14 +2007,27 @@ class _$GetAnimeInformationStudiosModelImpl
       _$$GetAnimeInformationStudiosModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationStudiosModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationStudiosModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationStudiosModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1889,18 +2049,17 @@ class _$GetAnimeInformationStudiosModelImpl
 
 abstract class _GetAnimeInformationStudiosModel
     implements GetAnimeInformationStudiosModel {
-  factory _GetAnimeInformationStudiosModel({String? name, String? url}) =
-      _$GetAnimeInformationStudiosModelImpl;
+  factory _GetAnimeInformationStudiosModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationStudiosModelImpl;
 
   factory _GetAnimeInformationStudiosModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeInformationStudiosModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationStudiosModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1919,9 +2078,7 @@ GetAnimeInformationSourceModel _$GetAnimeInformationSourceModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationSourceModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationSourceModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2030,14 +2187,27 @@ class _$GetAnimeInformationSourceModelImpl
       _$$GetAnimeInformationSourceModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationSourceModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationSourceModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationSourceModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2059,18 +2229,17 @@ class _$GetAnimeInformationSourceModelImpl
 
 abstract class _GetAnimeInformationSourceModel
     implements GetAnimeInformationSourceModel {
-  factory _GetAnimeInformationSourceModel({String? name, String? url}) =
-      _$GetAnimeInformationSourceModelImpl;
+  factory _GetAnimeInformationSourceModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationSourceModelImpl;
 
   factory _GetAnimeInformationSourceModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeInformationSourceModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationSourceModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2089,9 +2258,7 @@ GetAnimeInformationGenresModel _$GetAnimeInformationGenresModelFromJson(
 /// @nodoc
 mixin _$GetAnimeInformationGenresModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationGenresModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2200,14 +2367,27 @@ class _$GetAnimeInformationGenresModelImpl
       _$$GetAnimeInformationGenresModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationGenresModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationGenresModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2229,18 +2409,17 @@ class _$GetAnimeInformationGenresModelImpl
 
 abstract class _GetAnimeInformationGenresModel
     implements GetAnimeInformationGenresModel {
-  factory _GetAnimeInformationGenresModel({String? name, String? url}) =
-      _$GetAnimeInformationGenresModelImpl;
+  factory _GetAnimeInformationGenresModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationGenresModelImpl;
 
   factory _GetAnimeInformationGenresModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeInformationGenresModelImpl.fromJson;
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationGenresModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2259,9 +2438,7 @@ GetAnimeInformationDemographicModel
 /// @nodoc
 mixin _$GetAnimeInformationDemographicModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeInformationDemographicModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2371,14 +2548,27 @@ class _$GetAnimeInformationDemographicModelImpl
       _$$GetAnimeInformationDemographicModelImplFromJson(json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeInformationDemographicModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeInformationDemographicModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeInformationDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2400,8 +2590,9 @@ class _$GetAnimeInformationDemographicModelImpl
 
 abstract class _GetAnimeInformationDemographicModel
     implements GetAnimeInformationDemographicModel {
-  factory _GetAnimeInformationDemographicModel({String? name, String? url}) =
-      _$GetAnimeInformationDemographicModelImpl;
+  factory _GetAnimeInformationDemographicModel(
+      {final String? name,
+      final String? url}) = _$GetAnimeInformationDemographicModelImpl;
 
   factory _GetAnimeInformationDemographicModel.fromJson(
           Map<String, dynamic> json) =
@@ -2409,10 +2600,8 @@ abstract class _GetAnimeInformationDemographicModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeInformationDemographicModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2431,15 +2620,10 @@ GetAnimeStatisticsModel _$GetAnimeStatisticsModelFromJson(
 /// @nodoc
 mixin _$GetAnimeStatisticsModel {
   double? get score => throw _privateConstructorUsedError;
-  set score(double? value) => throw _privateConstructorUsedError;
   int? get ranked => throw _privateConstructorUsedError;
-  set ranked(int? value) => throw _privateConstructorUsedError;
   int? get popularity => throw _privateConstructorUsedError;
-  set popularity(int? value) => throw _privateConstructorUsedError;
   int? get members => throw _privateConstructorUsedError;
-  set members(int? value) => throw _privateConstructorUsedError;
   int? get favorites => throw _privateConstructorUsedError;
-  set favorites(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeStatisticsModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2585,20 +2769,39 @@ class _$GetAnimeStatisticsModelImpl implements _GetAnimeStatisticsModel {
       _$$GetAnimeStatisticsModelImplFromJson(json);
 
   @override
-  double? score;
+  final double? score;
   @override
-  int? ranked;
+  final int? ranked;
   @override
-  int? popularity;
+  final int? popularity;
   @override
-  int? members;
+  final int? members;
   @override
-  int? favorites;
+  final int? favorites;
 
   @override
   String toString() {
     return 'GetAnimeStatisticsModel(score: $score, ranked: $ranked, popularity: $popularity, members: $members, favorites: $favorites)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeStatisticsModelImpl &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.ranked, ranked) || other.ranked == ranked) &&
+            (identical(other.popularity, popularity) ||
+                other.popularity == popularity) &&
+            (identical(other.members, members) || other.members == members) &&
+            (identical(other.favorites, favorites) ||
+                other.favorites == favorites));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, score, ranked, popularity, members, favorites);
 
   /// Create a copy of GetAnimeStatisticsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -2619,30 +2822,25 @@ class _$GetAnimeStatisticsModelImpl implements _GetAnimeStatisticsModel {
 
 abstract class _GetAnimeStatisticsModel implements GetAnimeStatisticsModel {
   factory _GetAnimeStatisticsModel(
-      {double? score,
-      int? ranked,
-      int? popularity,
-      int? members,
-      int? favorites}) = _$GetAnimeStatisticsModelImpl;
+      {final double? score,
+      final int? ranked,
+      final int? popularity,
+      final int? members,
+      final int? favorites}) = _$GetAnimeStatisticsModelImpl;
 
   factory _GetAnimeStatisticsModel.fromJson(Map<String, dynamic> json) =
       _$GetAnimeStatisticsModelImpl.fromJson;
 
   @override
   double? get score;
-  set score(double? value);
   @override
   int? get ranked;
-  set ranked(int? value);
   @override
   int? get popularity;
-  set popularity(int? value);
   @override
   int? get members;
-  set members(int? value);
   @override
   int? get favorites;
-  set favorites(int? value);
 
   /// Create a copy of GetAnimeStatisticsModel
   /// with the given fields replaced by the non-null parameter values.

@@ -1,10 +1,17 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_anime_recomendations_by_anime_model.freezed.dart';
 
 part 'get_anime_recomendations_by_anime_model.g.dart';
 
-@unfreezed
+GetAnimeRecomendationsByAnimeModel getAnimeRecomendationsByAnimeModelFromJson(String str) => GetAnimeRecomendationsByAnimeModel.fromJson(json.decode(str));
+
+String getAnimeRecomendationsByAnimeModelToJson(GetAnimeRecomendationsByAnimeModel data) => json.encode(data.toJson());
+
+
+@freezed
 class GetAnimeRecomendationsByAnimeModel
     with _$GetAnimeRecomendationsByAnimeModel {
   factory GetAnimeRecomendationsByAnimeModel({
@@ -17,7 +24,7 @@ class GetAnimeRecomendationsByAnimeModel
       _$GetAnimeRecomendationsByAnimeModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsByAnimeRecommendationsModel
     with _$GetAnimeRecomendationsByAnimeRecommendationsModel {
   factory GetAnimeRecomendationsByAnimeRecommendationsModel({
@@ -33,7 +40,7 @@ class GetAnimeRecomendationsByAnimeRecommendationsModel
       _$GetAnimeRecomendationsByAnimeRecommendationsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
     with _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel {
   factory GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel({
@@ -49,7 +56,7 @@ class GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
           json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
     with _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModel {
   factory GetAnimeRecomendationsByAnimeRecommendationsAuthorModel({
@@ -62,7 +69,7 @@ class GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
       _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeRecomendationsByAnimeRecommendationsLikedModel
     with _$GetAnimeRecomendationsByAnimeRecommendationsLikedModel {
   factory GetAnimeRecomendationsByAnimeRecommendationsLikedModel({

@@ -21,21 +21,13 @@ SearchAnimesModel _$SearchAnimesModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SearchAnimesModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  set description(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'picture_url')
   String? get pictureUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this SearchAnimesModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -181,23 +173,44 @@ class _$SearchAnimesModelImpl implements _SearchAnimesModel {
       _$$SearchAnimesModelImplFromJson(json);
 
   @override
-  String? title;
+  final String? title;
   @override
-  String? description;
+  final String? description;
   @override
   @JsonKey(name: 'picture_url')
-  String? pictureUrl;
+  final String? pictureUrl;
   @override
   @JsonKey(name: 'myanimelist_url')
-  String? myanimelistUrl;
+  final String? myanimelistUrl;
   @override
   @JsonKey(name: 'myanimelist_id')
-  int? myanimelistId;
+  final int? myanimelistId;
 
   @override
   String toString() {
     return 'SearchAnimesModel(title: $title, description: $description, pictureUrl: $pictureUrl, myanimelistUrl: $myanimelistUrl, myanimelistId: $myanimelistId)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchAnimesModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.pictureUrl, pictureUrl) ||
+                other.pictureUrl == pictureUrl) &&
+            (identical(other.myanimelistUrl, myanimelistUrl) ||
+                other.myanimelistUrl == myanimelistUrl) &&
+            (identical(other.myanimelistId, myanimelistId) ||
+                other.myanimelistId == myanimelistId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, title, description, pictureUrl,
+      myanimelistUrl, myanimelistId);
 
   /// Create a copy of SearchAnimesModel
   /// with the given fields replaced by the non-null parameter values.
@@ -218,11 +231,11 @@ class _$SearchAnimesModelImpl implements _SearchAnimesModel {
 
 abstract class _SearchAnimesModel implements SearchAnimesModel {
   factory _SearchAnimesModel(
-          {String? title,
-          String? description,
-          @JsonKey(name: 'picture_url') String? pictureUrl,
-          @JsonKey(name: 'myanimelist_url') String? myanimelistUrl,
-          @JsonKey(name: 'myanimelist_id') int? myanimelistId}) =
+          {final String? title,
+          final String? description,
+          @JsonKey(name: 'picture_url') final String? pictureUrl,
+          @JsonKey(name: 'myanimelist_url') final String? myanimelistUrl,
+          @JsonKey(name: 'myanimelist_id') final int? myanimelistId}) =
       _$SearchAnimesModelImpl;
 
   factory _SearchAnimesModel.fromJson(Map<String, dynamic> json) =
@@ -230,25 +243,17 @@ abstract class _SearchAnimesModel implements SearchAnimesModel {
 
   @override
   String? get title;
-  set title(String? value);
   @override
   String? get description;
-  set description(String? value);
   @override
   @JsonKey(name: 'picture_url')
   String? get pictureUrl;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value);
 
   /// Create a copy of SearchAnimesModel
   /// with the given fields replaced by the non-null parameter values.

@@ -1,10 +1,18 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'get_anime_reviews_by_anime_model.freezed.dart';
 
 part 'get_anime_reviews_by_anime_model.g.dart';
 
-@unfreezed
+GetAnimeReviewsByAnimeModel getAnimeReviewsByAnimeModelFromJson(String str) => GetAnimeReviewsByAnimeModel.fromJson(json.decode(str));
+
+String getAnimeReviewsByAnimeModelToJson(GetAnimeReviewsByAnimeModel data) => json.encode(data.toJson());
+
+
+
+@freezed
 class GetAnimeReviewsByAnimeModel with _$GetAnimeReviewsByAnimeModel {
   factory GetAnimeReviewsByAnimeModel({
     List<GetAnimeReviewsByAnimeReviewsModel?>? reviews,
@@ -15,7 +23,7 @@ class GetAnimeReviewsByAnimeModel with _$GetAnimeReviewsByAnimeModel {
       _$GetAnimeReviewsByAnimeModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeReviewsByAnimeReviewsModel
     with _$GetAnimeReviewsByAnimeReviewsModel {
   factory GetAnimeReviewsByAnimeReviewsModel({
@@ -32,7 +40,7 @@ class GetAnimeReviewsByAnimeReviewsModel
       _$GetAnimeReviewsByAnimeReviewsModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeReviewsByAnimeReviewsUserModel
     with _$GetAnimeReviewsByAnimeReviewsUserModel {
   factory GetAnimeReviewsByAnimeReviewsUserModel({
@@ -46,7 +54,7 @@ class GetAnimeReviewsByAnimeReviewsUserModel
       _$GetAnimeReviewsByAnimeReviewsUserModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeReviewsByAnimeReviewsTextModel
     with _$GetAnimeReviewsByAnimeReviewsTextModel {
   factory GetAnimeReviewsByAnimeReviewsTextModel({
@@ -60,7 +68,7 @@ class GetAnimeReviewsByAnimeReviewsTextModel
       _$GetAnimeReviewsByAnimeReviewsTextModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeReviewsByAnimeReviewsDateModel
     with _$GetAnimeReviewsByAnimeReviewsDateModel {
   factory GetAnimeReviewsByAnimeReviewsDateModel({
@@ -74,7 +82,7 @@ class GetAnimeReviewsByAnimeReviewsDateModel
       _$GetAnimeReviewsByAnimeReviewsDateModelFromJson(json);
 }
 
-@unfreezed
+@freezed
 class GetAnimeReviewsByAnimeReviewsObjectModel
     with _$GetAnimeReviewsByAnimeReviewsObjectModel {
   factory GetAnimeReviewsByAnimeReviewsObjectModel({

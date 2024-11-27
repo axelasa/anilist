@@ -23,13 +23,8 @@ GetAnimeRecomendationsByAnimeModel _$GetAnimeRecomendationsByAnimeModelFromJson(
 mixin _$GetAnimeRecomendationsByAnimeModel {
   List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
       get recommendations => throw _privateConstructorUsedError;
-  set recommendations(
-          List<GetAnimeRecomendationsByAnimeRecommendationsModel?>? value) =>
-      throw _privateConstructorUsedError;
   @JsonKey(name: 'amount_recommendations')
   int? get amountRecommendations => throw _privateConstructorUsedError;
-  @JsonKey(name: 'amount_recommendations')
-  set amountRecommendations(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeRecomendationsByAnimeModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -123,7 +118,7 @@ class __$$GetAnimeRecomendationsByAnimeModelImplCopyWithImpl<$Res>
   }) {
     return _then(_$GetAnimeRecomendationsByAnimeModelImpl(
       recommendations: freezed == recommendations
-          ? _value.recommendations
+          ? _value._recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?,
       amountRecommendations: freezed == amountRecommendations
@@ -139,23 +134,53 @@ class __$$GetAnimeRecomendationsByAnimeModelImplCopyWithImpl<$Res>
 class _$GetAnimeRecomendationsByAnimeModelImpl
     implements _GetAnimeRecomendationsByAnimeModel {
   _$GetAnimeRecomendationsByAnimeModelImpl(
-      {this.recommendations,
-      @JsonKey(name: 'amount_recommendations') this.amountRecommendations});
+      {final List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
+          recommendations,
+      @JsonKey(name: 'amount_recommendations') this.amountRecommendations})
+      : _recommendations = recommendations;
 
   factory _$GetAnimeRecomendationsByAnimeModelImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$GetAnimeRecomendationsByAnimeModelImplFromJson(json);
 
+  final List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
+      _recommendations;
   @override
-  List<GetAnimeRecomendationsByAnimeRecommendationsModel?>? recommendations;
+  List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
+      get recommendations {
+    final value = _recommendations;
+    if (value == null) return null;
+    if (_recommendations is EqualUnmodifiableListView) return _recommendations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(name: 'amount_recommendations')
-  int? amountRecommendations;
+  final int? amountRecommendations;
 
   @override
   String toString() {
     return 'GetAnimeRecomendationsByAnimeModel(recommendations: $recommendations, amountRecommendations: $amountRecommendations)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeRecomendationsByAnimeModelImpl &&
+            const DeepCollectionEquality()
+                .equals(other._recommendations, _recommendations) &&
+            (identical(other.amountRecommendations, amountRecommendations) ||
+                other.amountRecommendations == amountRecommendations));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_recommendations),
+      amountRecommendations);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -178,10 +203,11 @@ class _$GetAnimeRecomendationsByAnimeModelImpl
 abstract class _GetAnimeRecomendationsByAnimeModel
     implements GetAnimeRecomendationsByAnimeModel {
   factory _GetAnimeRecomendationsByAnimeModel(
-      {List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
-          recommendations,
-      @JsonKey(name: 'amount_recommendations')
-      int? amountRecommendations}) = _$GetAnimeRecomendationsByAnimeModelImpl;
+          {final List<GetAnimeRecomendationsByAnimeRecommendationsModel?>?
+              recommendations,
+          @JsonKey(name: 'amount_recommendations')
+          final int? amountRecommendations}) =
+      _$GetAnimeRecomendationsByAnimeModelImpl;
 
   factory _GetAnimeRecomendationsByAnimeModel.fromJson(
           Map<String, dynamic> json) =
@@ -189,13 +215,9 @@ abstract class _GetAnimeRecomendationsByAnimeModel
 
   @override
   List<GetAnimeRecomendationsByAnimeRecommendationsModel?>? get recommendations;
-  set recommendations(
-      List<GetAnimeRecomendationsByAnimeRecommendationsModel?>? value);
   @override
   @JsonKey(name: 'amount_recommendations')
   int? get amountRecommendations;
-  @JsonKey(name: 'amount_recommendations')
-  set amountRecommendations(int? value);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeModel
   /// with the given fields replaced by the non-null parameter values.
@@ -216,19 +238,10 @@ GetAnimeRecomendationsByAnimeRecommendationsModel
 mixin _$GetAnimeRecomendationsByAnimeRecommendationsModel {
   GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
       get recommendation => throw _privateConstructorUsedError;
-  set recommendation(
-          GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
-              value) =>
-      throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  set description(String? value) => throw _privateConstructorUsedError;
   GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? get author =>
       throw _privateConstructorUsedError;
-  set author(GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? value) =>
-      throw _privateConstructorUsedError;
   GetAnimeRecomendationsByAnimeRecommendationsLikedModel? get liked =>
-      throw _privateConstructorUsedError;
-  set liked(GetAnimeRecomendationsByAnimeRecommendationsLikedModel? value) =>
       throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeRecomendationsByAnimeRecommendationsModel to a JSON map.
@@ -446,19 +459,37 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsModelImpl
       _$$GetAnimeRecomendationsByAnimeRecommendationsModelImplFromJson(json);
 
   @override
-  GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
+  final GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
       recommendation;
   @override
-  String? description;
+  final String? description;
   @override
-  GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? author;
+  final GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? author;
   @override
-  GetAnimeRecomendationsByAnimeRecommendationsLikedModel? liked;
+  final GetAnimeRecomendationsByAnimeRecommendationsLikedModel? liked;
 
   @override
   String toString() {
     return 'GetAnimeRecomendationsByAnimeRecommendationsModel(recommendation: $recommendation, description: $description, author: $author, liked: $liked)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAnimeRecomendationsByAnimeRecommendationsModelImpl &&
+            (identical(other.recommendation, recommendation) ||
+                other.recommendation == recommendation) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.author, author) || other.author == author) &&
+            (identical(other.liked, liked) || other.liked == liked));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, recommendation, description, author, liked);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -483,12 +514,12 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsModelImpl
 abstract class _GetAnimeRecomendationsByAnimeRecommendationsModel
     implements GetAnimeRecomendationsByAnimeRecommendationsModel {
   factory _GetAnimeRecomendationsByAnimeRecommendationsModel(
-          {GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
-              recommendation,
-          String? description,
-          GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? author,
-          GetAnimeRecomendationsByAnimeRecommendationsLikedModel? liked}) =
-      _$GetAnimeRecomendationsByAnimeRecommendationsModelImpl;
+      {final GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
+          recommendation,
+      final String? description,
+      final GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? author,
+      final GetAnimeRecomendationsByAnimeRecommendationsLikedModel?
+          liked}) = _$GetAnimeRecomendationsByAnimeRecommendationsModelImpl;
 
   factory _GetAnimeRecomendationsByAnimeRecommendationsModel.fromJson(
           Map<String, dynamic> json) =
@@ -497,17 +528,12 @@ abstract class _GetAnimeRecomendationsByAnimeRecommendationsModel
   @override
   GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel?
       get recommendation;
-  set recommendation(
-      GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel? value);
   @override
   String? get description;
-  set description(String? value);
   @override
   GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? get author;
-  set author(GetAnimeRecomendationsByAnimeRecommendationsAuthorModel? value);
   @override
   GetAnimeRecomendationsByAnimeRecommendationsLikedModel? get liked;
-  set liked(GetAnimeRecomendationsByAnimeRecommendationsLikedModel? value);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -528,19 +554,12 @@ GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
 /// @nodoc
 mixin _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'picture_url')
   String? get pictureUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -707,21 +726,41 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModelImpl
           json);
 
   @override
-  String? title;
+  final String? title;
   @override
   @JsonKey(name: 'picture_url')
-  String? pictureUrl;
+  final String? pictureUrl;
   @override
   @JsonKey(name: 'myanimelist_url')
-  String? myanimelistUrl;
+  final String? myanimelistUrl;
   @override
   @JsonKey(name: 'myanimelist_id')
-  int? myanimelistId;
+  final int? myanimelistId;
 
   @override
   String toString() {
     return 'GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel(title: $title, pictureUrl: $pictureUrl, myanimelistUrl: $myanimelistUrl, myanimelistId: $myanimelistId)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other
+                is _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.pictureUrl, pictureUrl) ||
+                other.pictureUrl == pictureUrl) &&
+            (identical(other.myanimelistUrl, myanimelistUrl) ||
+                other.myanimelistUrl == myanimelistUrl) &&
+            (identical(other.myanimelistId, myanimelistId) ||
+                other.myanimelistId == myanimelistId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, title, pictureUrl, myanimelistUrl, myanimelistId);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
   /// with the given fields replaced by the non-null parameter values.
@@ -746,10 +785,10 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModelImpl
 abstract class _GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
     implements GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel {
   factory _GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel(
-          {String? title,
-          @JsonKey(name: 'picture_url') String? pictureUrl,
-          @JsonKey(name: 'myanimelist_url') String? myanimelistUrl,
-          @JsonKey(name: 'myanimelist_id') int? myanimelistId}) =
+          {final String? title,
+          @JsonKey(name: 'picture_url') final String? pictureUrl,
+          @JsonKey(name: 'myanimelist_url') final String? myanimelistUrl,
+          @JsonKey(name: 'myanimelist_id') final int? myanimelistId}) =
       _$GetAnimeRecomendationsByAnimeRecommendationsRecommendationModelImpl;
 
   factory _GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel.fromJson(
@@ -759,22 +798,15 @@ abstract class _GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   @JsonKey(name: 'picture_url')
   String? get pictureUrl;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsRecommendationModel
   /// with the given fields replaced by the non-null parameter values.
@@ -795,9 +827,7 @@ GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
 /// @nodoc
 mixin _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModel {
   String? get name => throw _privateConstructorUsedError;
-  set name(String? value) => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  set url(String? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeRecomendationsByAnimeRecommendationsAuthorModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -924,14 +954,28 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModelImpl
           json);
 
   @override
-  String? name;
+  final String? name;
   @override
-  String? url;
+  final String? url;
 
   @override
   String toString() {
     return 'GetAnimeRecomendationsByAnimeRecommendationsAuthorModel(name: $name, url: $url)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other
+                is _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModelImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, name, url);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
   /// with the given fields replaced by the non-null parameter values.
@@ -956,7 +1000,7 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModelImpl
 abstract class _GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
     implements GetAnimeRecomendationsByAnimeRecommendationsAuthorModel {
   factory _GetAnimeRecomendationsByAnimeRecommendationsAuthorModel(
-          {String? name, String? url}) =
+          {final String? name, final String? url}) =
       _$GetAnimeRecomendationsByAnimeRecommendationsAuthorModelImpl;
 
   factory _GetAnimeRecomendationsByAnimeRecommendationsAuthorModel.fromJson(
@@ -965,10 +1009,8 @@ abstract class _GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
 
   @override
   String? get name;
-  set name(String? value);
   @override
   String? get url;
-  set url(String? value);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsAuthorModel
   /// with the given fields replaced by the non-null parameter values.
@@ -988,19 +1030,12 @@ GetAnimeRecomendationsByAnimeRecommendationsLikedModel
 /// @nodoc
 mixin _$GetAnimeRecomendationsByAnimeRecommendationsLikedModel {
   String? get title => throw _privateConstructorUsedError;
-  set title(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'picture_url')
   String? get pictureUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value) => throw _privateConstructorUsedError;
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value) => throw _privateConstructorUsedError;
 
   /// Serializes this GetAnimeRecomendationsByAnimeRecommendationsLikedModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1157,21 +1192,41 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsLikedModelImpl
           json);
 
   @override
-  String? title;
+  final String? title;
   @override
   @JsonKey(name: 'picture_url')
-  String? pictureUrl;
+  final String? pictureUrl;
   @override
   @JsonKey(name: 'myanimelist_url')
-  String? myanimelistUrl;
+  final String? myanimelistUrl;
   @override
   @JsonKey(name: 'myanimelist_id')
-  int? myanimelistId;
+  final int? myanimelistId;
 
   @override
   String toString() {
     return 'GetAnimeRecomendationsByAnimeRecommendationsLikedModel(title: $title, pictureUrl: $pictureUrl, myanimelistUrl: $myanimelistUrl, myanimelistId: $myanimelistId)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other
+                is _$GetAnimeRecomendationsByAnimeRecommendationsLikedModelImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.pictureUrl, pictureUrl) ||
+                other.pictureUrl == pictureUrl) &&
+            (identical(other.myanimelistUrl, myanimelistUrl) ||
+                other.myanimelistUrl == myanimelistUrl) &&
+            (identical(other.myanimelistId, myanimelistId) ||
+                other.myanimelistId == myanimelistId));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, title, pictureUrl, myanimelistUrl, myanimelistId);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsLikedModel
   /// with the given fields replaced by the non-null parameter values.
@@ -1196,10 +1251,10 @@ class _$GetAnimeRecomendationsByAnimeRecommendationsLikedModelImpl
 abstract class _GetAnimeRecomendationsByAnimeRecommendationsLikedModel
     implements GetAnimeRecomendationsByAnimeRecommendationsLikedModel {
   factory _GetAnimeRecomendationsByAnimeRecommendationsLikedModel(
-          {String? title,
-          @JsonKey(name: 'picture_url') String? pictureUrl,
-          @JsonKey(name: 'myanimelist_url') String? myanimelistUrl,
-          @JsonKey(name: 'myanimelist_id') int? myanimelistId}) =
+          {final String? title,
+          @JsonKey(name: 'picture_url') final String? pictureUrl,
+          @JsonKey(name: 'myanimelist_url') final String? myanimelistUrl,
+          @JsonKey(name: 'myanimelist_id') final int? myanimelistId}) =
       _$GetAnimeRecomendationsByAnimeRecommendationsLikedModelImpl;
 
   factory _GetAnimeRecomendationsByAnimeRecommendationsLikedModel.fromJson(
@@ -1208,22 +1263,15 @@ abstract class _GetAnimeRecomendationsByAnimeRecommendationsLikedModel
 
   @override
   String? get title;
-  set title(String? value);
   @override
   @JsonKey(name: 'picture_url')
   String? get pictureUrl;
-  @JsonKey(name: 'picture_url')
-  set pictureUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_url')
   String? get myanimelistUrl;
-  @JsonKey(name: 'myanimelist_url')
-  set myanimelistUrl(String? value);
   @override
   @JsonKey(name: 'myanimelist_id')
   int? get myanimelistId;
-  @JsonKey(name: 'myanimelist_id')
-  set myanimelistId(int? value);
 
   /// Create a copy of GetAnimeRecomendationsByAnimeRecommendationsLikedModel
   /// with the given fields replaced by the non-null parameter values.
