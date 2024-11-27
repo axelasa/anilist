@@ -26,11 +26,11 @@ class DioClient{
         options: options,
         onReceiveProgress: onReceiveProgress,
       );
-      debugPrint(response.data);
+      debugPrint(response.statusCode.toString());
       return response.data;
     }on DioException catch(e){
       var error = ErrorHandler.fromDioError(e);
-      throw error.errorMessage;
+       throw error.errorMessage;
     }
   }
 }

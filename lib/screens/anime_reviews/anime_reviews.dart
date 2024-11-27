@@ -30,7 +30,7 @@ class _AnimeReviewsState extends State<AnimeReviews> {
             }
             if(state is GetAnimeReviewsFail){
               String data = state.error.toString();
-              print("Here is the review Error data ${data}");
+              debugPrint("Here is the review Error data $data");
               return Center(child: Text(data),);
             }
             if(state is GetAnimeReviewsSuccess){

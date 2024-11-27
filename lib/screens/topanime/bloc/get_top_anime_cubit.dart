@@ -1,22 +1,28 @@
 import 'package:anilist/model/get_top_anime_model.dart';
-import 'package:anilist/repository/api.dart';
 import 'package:bloc/bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:equatable/equatable.dart';
+
+import '../../../repository/api.dart';
 
 part 'get_top_anime_state.dart';
-part 'get_top_anime_cubit.freezed.dart';
 
 class GetTopAnimeCubit extends Cubit<GetTopAnimeState> {
   final ApiService apiService;
-  GetTopAnimeCubit(this.apiService) : super(const GetTopAnimeState.loaded());
 
-  Future<void>fetchTopAnime(Map<String,dynamic>data)async{
-    await apiService.fetchTopAnime(data).then((value){
-      emit(const TopAnimeLoading());
+  GetTopAnimeCubit(this.apiService) : super(GetTopAnimeInitial());
 
-      emit(const TopAnimeLoaded());
-    }).onError((error, stackTrace){
-      emit(const TopAnimeLoaded());
-    });
+  Future<void>fetchTopAnime(Map<String, dynamic> data) async {
+    emit(const GetTopAnimeLoading());
+    try{
+      await apiService.fetchTopAnime(data).then((value){
+        emit( GetTopAnimeSuccess(value));
+      }).onError((error, stackTrace){
+        emit(GetTopAnimeFail(error.toString()));
+
+      });
+    }catch(e){
+      emit(GetTopAnimeFail(e.toString()));
+    }
   }
+
 }
